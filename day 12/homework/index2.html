@@ -1,0 +1,66 @@
+ <!-- 2) შექმენით საიტი სადაც გამოიყენებთ ყველა ნასწავლ თეგს. -->
+
+ <!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>მარტივი HTML საიტი</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>HTML მაგალითი</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#section1">გაზომვა 1</a></li>
+            <li><a href="#section2">გაზომვა 2</a></li>
+            <li><a href="#section3">გაზომვა 3</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="section1">
+            <h2>გაზომვა 1</h2>
+            <p>ეს არის მაგალითი აბზაცისა. HTML-ის ძირითადი სტრუქტურა მოიცავს ტეგებს, როგორიცაა <code>&lt;h1&gt;</code> და <code>&lt;p&gt;</code>.</p>
+            <img src="https://via.placeholder.com/150" alt="მონაცემთა სურათი">
+        </section>
+
+        <section id="section2">
+            <h2>გაზომვა 2</h2>
+            <ul>
+                <li>პუნქტი 1</li>
+                <li>პუნქტი 2</li>
+                <li>პუნქტი 3</li>
+            </ul>
+        </section>
+
+        <section id="section3">
+            <h2>გაზომვა 3</h2>
+            <ol>
+                <li>ნუმერირებული პუნქტი 1</li>
+                <li>ნუმერირებული პუნქტი 2</li>
+                <li>ნუმერირებული პუნქტი 3</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>შექმნილია <a href="https://www.example.com" target="_blank">ჩემ მიერ</a> 2025 წელს</p>
+    </footer>
+
+    <form action="/submit" method="post">
+        <label for="name">სახელი:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">ელ-ფოსტა:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <button type="submit">გაგზავნა</button>
+    </form>
+
+</body>
+</html>
