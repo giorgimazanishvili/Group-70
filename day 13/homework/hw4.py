@@ -9,12 +9,12 @@
 
 # სხვა შემთხვევაში → "აქტივობის დონე ნორმალურია"
 
-age = int(input("შეიყვანეთ თქვენი ასაკი: "))
-heart_rate = int(input("შეიყვანეთ თქვენი გულის ცემა: "))
+age = int(input("შეიყვანე ასაკი: "))
+pulse = int(input("შეიყვანე გულის ცემა: "))
 
-if age < 30 and heart_rate < 140:
+if age < 30 and pulse < 140:
     print("შეგიძლიათ მეტი ივარჯიშოთ")
-elif age >= 30 and heart_rate > 170:
+elif age >= 30 and pulse > 170:
     print("დასვენება გჭირდებათ")
 else:
     print("აქტივობის დონე ნორმალურია")

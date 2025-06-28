@@ -1,2 +1,3 @@
-# 1. Sololearn: 
-# გაკეთებული
+# 1. Sololearn:
+
+# ara gvaq davaleba.

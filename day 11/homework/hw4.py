@@ -2,29 +2,25 @@
 # დაბეჭდე შედეგი შესაბამისი მოქმედებით.
 # თუ ოპერაცია არასწორია (მაგ 0-ს გაყოფა ან ტექსტი ან უცხო სიმბოლო) → "არასწორი ოპერაცია!"
 
-num1 = float(input("Please enter the first number: "))
-num2 = float(input("Please enter the second number: "))
-operation = input("Please enter an operation (+, -, *, /): ").strip()
 
-try:
-    if operation == "+":
-        result = num1 + num2
-    elif operation == "-":
-        result = num1 - num2
-    elif operation == "*":
-        result = num1 * num2
-    elif operation == "/":
-        if num2 == 0:
-            print("Cannot divide by zero!")
-            result = None
-        else:
-            result = num1 / num2
+num1 = float(input("შეიყვანეთ პირველი რიცხვი: "))
+num2 = float(input("შეიყვანეთ მეორე რიცხვი: "))
+operation = input("შეიყვანეთ ოპერაცია (+, -, *, /): ")
+
+if operation == "+":
+    result = num1 + num2
+    print(f"შედეგი: {result}")
+elif operation == "-":
+    result = num1 - num2
+    print(f"შედეგი: {result}")
+elif operation == "*":
+    result = num1 * num2
+    print(f"შედეგი: {result}")
+elif operation == "/":
+    if num2 == 0:
+        print("არასწორი ოპერაცია! 0-ს გაყოფა შეუძლებელია.")
     else:
-        print("Invalid operation!")
-        result = None
-
-    if result is not None:
-        print(f"The result is: {result}")
-
-except ValueError:
-    print("Invalid input! Please enter valid numbers.")
+        result = num1 / num2
+        print(f"შედეგი: {result}")
+else:
+    print("არასწორი ოპერაცია!")

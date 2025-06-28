@@ -1,6 +1,6 @@
-# 1) შემოაყვანინეთ მომხმარებელს n რიცხვი და დაპრინტეთ ყველა რიცხვი ნოლიდან n+1-მდე
+# 1) შემოაყვანინეთ მომხმარებელს n რიცხვი და დაპრინტეთ ყველა რიცხვი ნოლიდან n+1-მდე.
 
-n = int(input("enter nambar  n: "))
+n = int(input("enter your namber n:"))
 
-for i in range(n+2):
+for i in range (n + 1):
     print(i)

@@ -3,13 +3,12 @@
 # თუ მხოლოდ ერთი დადებითია → "მხოლოდ ერთი დადებითი რიცხვია"
 # თუ არცერთი არ არის დადებითი → "არცერთი არ არის დადებითი"
 
-
-num1 = int(input("enter the first number:"))
-num2 = int(input("enter the second number:"))
+num1 = float(input("enter your nambar 1: "))
+num2 = float(input("enter your nambar 2: "))
 
 if num1 > 0 and num2 > 0:
-    print("Both numbers are positive.")
+    print("ორივე დადებითია")
 elif num1 > 0 or num2 > 0:
-    print("Only one number is positive.")
+    print("მხოლოდ ერთი დადებითი რიცხვია")
 else:
-    print("Neither of the numbers is positive.")
+    print("არცერთი არ არის დადებითი")

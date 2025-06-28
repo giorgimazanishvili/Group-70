@@ -1,66 +1,92 @@
- <!-- 2) შექმენით საიტი სადაც გამოიყენებთ ყველა ნასწავლ თეგს. -->
+<!-- 2) შექმენით საიტი სადაც გამოიყენებთ ყველა ნასწავლ თეგს -->
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ka">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>მარტივი HTML საიტი</title>
-    <link rel="stylesheet" href="style.css"> 
+    <title>HTML-ის მაგალითი</title>
+    <style>
+        /* გვერდის სტილი */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+        }
+        .link-button {
+            background-color: #008CBA;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .link-button:hover {
+            background-color: #006F8E;
+        }
+        ul {
+            list-style-type: circle;
+        }
+        ol {
+            list-style-type: decimal;
+        }
+    </style>
 </head>
 <body>
 
+    <!-- Header Section -->
     <header>
-        <h1>HTML მაგალითი</h1>
+        <h1>HTML-ის სრული მაგალითი</h1>
+        <p>ეს არის საიტი, რომელიც იყენებს ყველა ძირითად HTML ტეგს.</p>
     </header>
 
-    <nav>
+    <!-- Main Content Section -->
+    <section>
+        <h2>გადმოიკითხე მეტი ჩვენი საიტის შესახებ</h2>
+        
+        <p>HTML არის ძლიერი ენა ვებ-გვერდების შექმნისთვის. აქ მოცემულია რამდენიმე ელემენტი:</p>
+        
+        <!-- Unordered List -->
         <ul>
-            <li><a href="#section1">გაზომვა 1</a></li>
-            <li><a href="#section2">გაზომვა 2</a></li>
-            <li><a href="#section3">გაზომვა 3</a></li>
+            <li>პარაგრაფი</li>
+            <li>სურათები</li>
+            <li>ჰიპერტექსტური ლინკები</li>
+            <li>ფორმები</li>
         </ul>
-    </nav>
 
-    <main>
-        <section id="section1">
-            <h2>გაზომვა 1</h2>
-            <p>ეს არის მაგალითი აბზაცისა. HTML-ის ძირითადი სტრუქტურა მოიცავს ტეგებს, როგორიცაა <code>&lt;h1&gt;</code> და <code>&lt;p&gt;</code>.</p>
-            <img src="https://via.placeholder.com/150" alt="მონაცემთა სურათი">
-        </section>
+        <!-- Ordered List -->
+        <ol>
+            <li>გაიგე HTML-ის საფუძვლები</li>
+            <li>გამოიყენე ტეგები</li>
+            <li>შექმენი ფორმები და ლინკები</li>
+        </ol>
 
-        <section id="section2">
-            <h2>გაზომვა 2</h2>
-            <ul>
-                <li>პუნქტი 1</li>
-                <li>პუნქტი 2</li>
-                <li>პუნქტი 3</li>
-            </ul>
-        </section>
-
-        <section id="section3">
-            <h2>გაზომვა 3</h2>
-            <ol>
-                <li>ნუმერირებული პუნქტი 1</li>
-                <li>ნუმერირებული პუნქტი 2</li>
-                <li>ნუმერირებული პუნქტი 3</li>
-            </ol>
-        </section>
-    </main>
-
-    <footer>
-        <p>შექმნილია <a href="https://www.example.com" target="_blank">ჩემ მიერ</a> 2025 წელს</p>
-    </footer>
-
-    <form action="/submit" method="post">
-        <label for="name">სახელი:</label>
-        <input type="text" id="name" name="name" required>
-        <br>
-        <label for="email">ელ-ფოსტა:</label>
-        <input type="email" id="email" name="email" required>
-        <br>
-        <button type="submit">გაგზავნა</button>
-    </form>
-
-</body>
-</html>
+        <!-- Image Example -->
+        <div class="content">
+            <h3>სურათის მაგალითი</h3>
+            <img src="htt

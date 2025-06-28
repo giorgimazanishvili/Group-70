@@ -1,8 +1,10 @@
-# 1. მომხმარებელს შემოატანინეთ სამი რიცხვი, start/end/step და ჩასვით for loop-ში სათანადო ადგილას.
+# # 1. მომხმარებელს შემოატანინეთ სამი რიცხვი, start/end/step და ჩასვით for loop-ში სათანადო ადგილას.
 
-num = input("enter your namber")
-num2 = input("enter your namber")
-num3 = input("enter your namber")
+# მომხმარებლისგან ვიღებთ სამ რიცხვს: start, end, step
+start = int(input("შეიყვანეთ დასაწყისი (start): "))
+end = int(input("შეიყვანეთ დასასრული (end): "))
+step = int(input("შეიყვანეთ ნაბიჯი (step): "))
 
-for i in range (1,34,1):
-    print(i)
+# for loop გამოყენება user-ის შეყვანილი start, end და step-სთან ერთად
+for i in range(start, end, step):  # თავი - მომხმარებლის შეყვანილი პარამეტრები
+    print(i)  # სხეული - i-ს გამოშვება

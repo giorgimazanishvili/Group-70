@@ -1,10 +1,8 @@
-# 3. გააკეთეთ {2.} classwork For loop-ის გამოყენებით.
+# # 3. გააკეთეთ {2.} classwork For loop-ის გამოყენებით.
 
+# მომხმარებლისგან რიცხვის მიღება
+target = int(input("შეიყვანეთ რიცხვი: "))
 
-user_number = int(input("enter your namber"))
-
-i = 1
-
-for i in range(1,11,1):
-    print(i)
-    i += 1
+# for loop, რომელიც დაბეჭდავს რიცხვებს 0-იდან target-ის ჩათვლით
+for i in range(target + 1):  # თავი — i მერყეობს 0-დან target-მდე
+    print(i)  # სხეული — i-ს დაბეჭდვა

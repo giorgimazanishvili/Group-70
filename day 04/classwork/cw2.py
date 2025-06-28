@@ -1,12 +1,9 @@
-# 3) მომხმარებელს შეატანინეთ მისი სახელი გვარი და ასაკი და შემდეგ გამოიტანეთ ისინი outpout-ში შედეგი გამოსახულებით -სახელი: {შემოყვანილი სახელი}- (იგივე ყველა ცვლადზე).
+# 2) დაარქვით ამ ცვლადებს snake_case სინტაქსით.
 
-name = input("enter your name:")
-surname = input("enter your surname:")
-age = input ("enter your age:")
+my_name = "გიო"
+I_age = 13
+I_qalaqi = "რუსთავი"
+last_name = "მაზანიშვილი"
+my_hobi = "ფეხბურთი"
 
-
-# შედეგის ლამაზად გამოტანა
-print("\nშენი მონაცემები:")
-print(f"- name: {name}")
-print(f"- surname: {surname}")
-print(f"- age: {age}")
+print("ჩემი სახელია " + (my_name) + " სახელი " + "ჩემი გვარია" + (last_name) + " და მე ვარ " + str(I_age) + " წლის " + "ჩემო ჰობია" + (my_hobi) + "მე ვცხოვრობ" + (I_qalaqi))

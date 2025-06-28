@@ -1,11 +1,7 @@
-# 1)მომხმარებელს შემოატანინეთ 3 რიცხვი და გამოიტანეთ მაგ სამი რიცხვის ჯამი. 
+# 1) მომხმარებელს შემოატანინეთ 3 რიცხვი და გამოიტანეთ მაგ სამი რიცხვის ჯამი.
 
-num1 = float(input("შეიყვანეთ პირველი რიცხვი: "))
-num2 = float(input("შეიყვანეთ მეორე რიცხვი: "))
-num3 = float(input("შეიყვანეთ მესამე რიცხვი: "))
+num1 =  int(input("enter a nambr :"))
+num2 =  int(input("enter a nambr :"))
+num3 =  int(input("enter a nambr :"))
 
-
-sum_numbers = num1 + num2 + num3
-
-
-print("სამი რიცხვის ჯამი არის:", sum_numbers)
+print(num1 + num2 + num3)

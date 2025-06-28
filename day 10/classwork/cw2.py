@@ -1,8 +1,8 @@
 # 2) მომხმარებელს შემოატანინეთ რიცხვი და და გამოიტანეთ ეს რიცხვი კენტია თუ ლუწი.
 
-num = int(input("Enter your number: "))
+number = int(input("შეიყვანეთ რიცხვი: "))
 
-if num % 2 == 0:
-    print("ეს რიცხვი ლუწია")
+if number % 2 == 0:
+    print(f"{number} არის ლუწი")
 else:
-    print("ეს რიცხვი კენტია")
+    print(f"{number} არის კენტი")
