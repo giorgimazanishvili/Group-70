@@ -1,4 +1,5 @@
-# 3) დაითვალე, რამდენჯერ სცადა სწორი სიტყვის შეყვანა.
+# 3)რობოტმა უნდა დაითვალოს, რამდენჯერ სცადე სწორი სიტყვის შეყვანა.
+# ანუ ყოველ ჯერზე, როცა სწორი სიტყვა უთხარი, უნდა დაიმახსოვროს და უთხრას ბოლოს რიცხვი.
 
 def is_consonant(c):
     vowels = "ბგდზთკლმნპჟრ"
@@ -9,9 +10,9 @@ attempts = 0
 
 for _ in range(5):
     user_input = input("შეიყვანეთ სიტყვა: ")
-    attempts += 1
     if is_consonant(user_input[0]) and is_consonant(user_input[-1]):
         correct_words.append(user_input)
+        attempts += 1
 
 print("შესაბამისი სიტყვები:", correct_words)
-print("სცადეთ სწორი სიტყვის შეყვანა:", attempts, "ჯერ.")
+print("სწორი სიტყვების რაოდენობა:", attempts)

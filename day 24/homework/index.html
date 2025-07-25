@@ -1,0 +1,46 @@
+<!-- 1) შექმენი ფორმა, სადაც მოსწავლე ავსებს საკუთარ მონაცემებს.
+
+უნდა ჰქონდეს:
+
+სახელი
+
+გვარი
+
+ასაკი
+
+რომელ კლასში ხარ?
+
+შენი საყვარელი საგანი
+
+ღილაკი: „შენახვა“ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>მოსწავლის ფორმა</title>
+</head>
+<body>
+    <h2>მოსწავლის მონაცემების ფორმა</h2>
+
+    <form>
+        <label for="name">სახელი:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="surname">გვარი:</label><br>
+        <input type="text" id="surname" name="surname" required><br><br>
+
+        <label for="age">ასაკი:</label><br>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="class">რომელ კლასში ხარ?</label><br>
+        <input type="text" id="class" name="class" required><br><br>
+
+        <label for="subject">შენი საყვარელი საგანი:</label><br>
+        <input type="text" id="subject" name="subject"><br><br>
+
+        <button type="submit">შენახვა</button>
+    </form>
+
+</body>
+</html>

@@ -1,14 +1,11 @@
-# 4) 10 სიტყვის შეყვანა და მხოლოდ სწორის დაბეჭდვა.
+# 4) შეიყვანე 10 სიტყვა, მაგრამ დაბეჭდოს (გამოაჩინოს) მხოლოდ სწორი სიტყვები.
+#  ანუ ისევ იგივე ლოგიკა – 10 სიტყვა უთხარი, მაგრამ ეკრანზე უნდა გამოჩნდეს მხოლოდ სწორი სიტყვები (ისინი, რომელთაც პირველი და ბოლო ასო თანხმოვანია, ან რაც წესია მოცემულ ამოცანაში).
 
 def is_consonant(c):
     vowels = "ბგდზთკლმნპჟრ"
     return c in vowels
 
-correct_words = []
-
 for _ in range(10):
     user_input = input("შეიყვანეთ სიტყვა: ")
     if is_consonant(user_input[0]) and is_consonant(user_input[-1]):
-        correct_words.append(user_input)
-
-print("შესაბამისი სიტყვები:", correct_words)
+        print("სწორი სიტყვა:", user_input)
