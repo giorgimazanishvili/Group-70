@@ -1,0 +1,31 @@
+<!-- 4) შექმენი Drop-down-menu  სადაც მომხმარებელს შეუძლია აირჩიოს საყვარელი სპორტი ერთ-ერთი კატეგორიიდან. -->
+
+<label for="sport-category">აირჩიეთ სპორტის კატეგორია:</label>
+<select id="sport-category" onchange="updateSports()">
+  <option value="team">გუნდური სპორტი</option>
+  <option value="individual">ინდივიდუალური სპორტი</option>
+</select>
+
+<label for="sport">აირჩიეთ სპორტი:</label>
+<select id="sport">
+  <option>პირველადი კატეგორია უნდა აირჩიოთ</option>
+</select>
+
+<script>
+  function updateSports() {
+    var category = document.getElementById('sport-category').value;
+    var sports = {
+      team: ['ფეხბურთი', 'კალათბურთი', 'რაგბი', 'ჰოკეი'],
+      individual: ['ტენისი', 'ათლეტიკა', 'ჩოგბურთი', 'ფიგურული სრიალი']
+    };
+    
+    var sportSelect = document.getElementById('sport');
+    sportSelect.innerHTML = '';
+
+    sports[category]?.forEach(function(sport) {
+      var option = document.createElement('option');
+      option.text = sport;
+      sportSelect.add(option);
+    });
+  }
+</script>

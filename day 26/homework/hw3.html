@@ -1,0 +1,50 @@
+<!-- 3) შექმენი Drop-down-menu სადაც სტუდენტი ირჩევს სასწავლო კურსს თავისი ფაკულტეტიდან -->
+
+<label for="faculty">აირჩიეთ ფაკულტეტი:</label>
+<select id="faculty" name="faculty" onchange="updateCourses()">
+  <option value="">აირჩიეთ ფაკულტეტი</option>
+  <option value="engineering">ინჟინერიის ფაკულტეტი</option>
+  <option value="science">ბუნების მეცნიერების ფაკულტეტი</option>
+  <option value="arts">ხელოვნების ფაკულტეტი</option>
+  <option value="business">ბიზნესის ფაკულტეტი</option>
+</select>
+
+<label for="course">აირჩიეთ სასწავლო კურსი:</label>
+<select id="course" name="course">
+  <option value="">პირველადი ფაკულტეტი უნდა აირჩიოთ</option>
+</select>
+
+<script>
+  function updateCourses() {
+    var faculty = document.getElementById('faculty').value;
+    var courseSelect = document.getElementById('course');
+    
+    // დაასუფთავეთ არსებული კურსები
+    courseSelect.innerHTML = '';
+
+    var courses = [];
+
+    if (faculty === 'engineering') {
+      courses = ['მექანიკა', 'ელექტრონიკა', 'კომპიუტერული მეცნიერება'];
+    } else if (faculty === 'science') {
+      courses = ['ფიზიკა', 'ქიმია', 'ბიოლოგია'];
+    } else if (faculty === 'arts') {
+      courses = ['ხატვა', 'სურათგალერეა', 'პოეზია'];
+    } else if (faculty === 'business') {
+      courses = ['მარკეტინგი', 'ფინანსები', 'გრანდის მართვა'];
+    }
+
+    // დაამატეთ კურსები drop-down-ში
+    var defaultOption = document.createElement('option');
+    defaultOption.text = 'აირჩიეთ კურსი';
+    defaultOption.value = '';
+    courseSelect.add(defaultOption);
+
+    for (var i = 0; i < courses.length; i++) {
+      var option = document.createElement('option');
+      option.text = courses[i];
+      option.value = courses[i].toLowerCase();
+      courseSelect.add(option);
+    }
+  }
+</script>
