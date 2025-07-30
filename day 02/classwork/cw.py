@@ -1,33 +1,42 @@
 # 1) შექმენით პითონის ფაილი და შემქენით ამ ფაილში თითოეული მონაცემთა ტიპი. 
 
-# 1) Integer (int)
-integer_example = 42
-print(f"Integer Example: {integer_example} | Type: {type(integer_example)}")
 
-# 2) Float
-float_example = 3.14
-print(f"Float Example: {float_example} | Type: {type(float_example)}")
+integer_number = 10
 
-# 3) String (str)
-string_example = "Hello, Python!"
-print(f"String Example: {string_example} | Type: {type(string_example)}")
 
-# 4) Boolean (bool)
-boolean_example = True
-print(f"Boolean Example: {boolean_example} | Type: {type(boolean_example)}")
+float_number = 3.14
 
-# 5) List
-list_example = [1, 2, 3, 4, 5]
-print(f"List Example: {list_example} | Type: {type(list_example)}")
 
-# 6) Tuple
-tuple_example = (1, 2, 3)
-print(f"Tuple Example: {tuple_example} | Type: {type(tuple_example)}")
+text_string = "გამარჯობა, მსოფლიო!"
 
-# 7) Set
-set_example = {1, 2, 3, 4, 5}
-print(f"Set Example: {set_example} | Type: {type(set_example)}")
 
-# 8) Dictionary (dict)
-dict_example = {"name": "John", "age": 30}
-print(f"Dictionary Example: {dict_example} | Type: {type(dict_example)}")
+is_active = True
+
+
+fruits = ["ვაშლი", "ბანანი", "მსხალი"]
+
+
+coordinates = (41.7151, 44.8271)
+
+
+person = {
+    "სახელი": "ნიკა",
+    "ასაკი": 25,
+    "ქვეყანა": "საქართველო"
+}
+
+
+unique_numbers = {1, 2, 3, 3, 2, 1}
+
+
+nothing = None
+
+print("Integer:", integer_number)
+print("Float:", float_number)
+print("String:", text_string)
+print("Boolean:", is_active)
+print("List:", fruits)
+print("Tuple:", coordinates)
+print("Dictionary:", person)
+print("Set:", unique_numbers)
+print("NoneType:", nothing)
