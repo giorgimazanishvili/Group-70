@@ -1,0 +1,69 @@
+/* დავალება 3) */
+
+/* ზოგადი სტილი */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* ბარათის სტილი */
+.profile-card {
+    background-color: white;
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: scale(1.05);
+}
+
+/* ფოტო */
+.profile-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #4CAF50;
+}
+
+/* სათაური */
+.profile-card h1 {
+    font-size: 24px;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+/* პროფესია */
+.profile-card .title {
+    color: #777;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* მისამართი */
+.profile-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* ღილაკი */
+.email-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.email-button:hover {
+    background-color: #45a049;
+}

@@ -1,0 +1,37 @@
+/* დავალება 4) */
+
+/* Body ელემენტის სტილი */
+body {
+    background-color: #f0f8ff;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* H1 სათაური */
+h1 {
+    color: darkblue;
+    font-size: 36px;
+}
+
+/* H2 სათაური */
+h2 {
+    color: darkgreen;
+    font-size: 28px;
+}
+
+/* პარაგრაფი */
+p {
+    color: #444;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ღილაკი */
+button {
+    background-color: coral;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
