@@ -1,0 +1,26 @@
+<!-- 4) შექმენი tuple (1,2,3,4,5,6,6,6,67,8) დაწერეთ რამდენჯერ გვხვდება 6 იანი  და რომელ ინდექსზეა 67-ი. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tuple Elements</h1>
+    <p>Count of 6s: <span id="count"></span></p>
+    <p>Index of 67: <span id="index"></span></p>
+
+    <script>
+
+        const numbers = (1, 2, 3, 4, 5, 6, 6, 6, 67, 8);
+        const countOfSix = numbers.filter(num => num === 6).length;
+        const indexOf67 = numbers.indexOf(67);
+
+        document.getElementById("count").innerText = countOfSix;
+        document.getElementById("index").innerText = indexOf67;
+        
+    </script>
+</body>
+</html>

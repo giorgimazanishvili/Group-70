@@ -1,0 +1,26 @@
+<!--5)შექმენით tuple სადაც შეინახავთ სიტყვებს შემდეგ დაწერე პროგრამა, რომელიც დაითვლის, რამდენჯერ მეორდება რომელიმე სიტყვა ტაპლში.
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+
+   <h1>Tuple Elements</h1>
+   <p>Word Count: <span id="wordCount"></span></p>
+
+   <script>
+       const words = ("apple", "banana", "orange", "apple", "kiwi", "banana", "apple");
+       let wordCount = {};
+       for (let i = 0; i < words.length; i++) {
+           wordCount[words[i]] = (wordCount[words[i]] || 0) + 1;
+       }
+       document.getElementById("wordCount").innerText = JSON.stringify(wordCount);
+   </script>
+
+ </body>
+ </html>

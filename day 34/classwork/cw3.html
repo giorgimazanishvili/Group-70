@@ -1,0 +1,27 @@
+<!-- 3) გააერთიანეთ tuple დაწერეთ ორი tuple და გააერთიანეთ და დაბურნეთ გაერთიანება ასევე გააკეთეთ ერთერთი tuple ის გამრავლება სასურველ რიცხვზე. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tuple Elements</h1>
+    <p>Combined Tuple: <span id="combined"></span></p>
+    <p>Multiplied Tuple: <span id="multiplied"></span></p>
+
+    <script>
+    
+        const tuple1 = ("apple", "banana", "cherry");
+        const tuple2 = ("date", "elderberry", "fig");
+        const combined = tuple1.concat(tuple2);
+        const multiplied = tuple1 * 2;
+
+        document.getElementById("combined").innerText = combined.join(", ");
+        document.getElementById("multiplied").innerText = multiplied.join(", ");
+        
+    </script>
+</body>
+</html>

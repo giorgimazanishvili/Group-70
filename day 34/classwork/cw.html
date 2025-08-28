@@ -1,0 +1,25 @@
+<!-- 1)შექმენით tuple სახელით fruits სადაც იქნება 5 ხილის სახელი. გამოიტანეთ ირველი ელემენტი ბოლო ელემნტი შუა ელემენტი. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tuple Elements</h1>
+    <p>First Element: <span id="first"></span></p>
+    <p>Last Element: <span id="last"></span></p>
+    <p>Middle Element: <span id="middle"></span></p>
+
+    <script>
+     
+        const fruits = ("apple", "banana", "cherry", "date", "elderberry");
+        document.getElementById("first").innerText = fruits[0];
+        document.getElementById("last").innerText = fruits[fruits.length - 1];
+        document.getElementById("middle").innerText = fruits[Math.floor(fruits.length / 2)];
+        
+    </script>
+</body>
+</html>

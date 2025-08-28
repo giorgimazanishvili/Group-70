@@ -1,0 +1,24 @@
+<!-- 2)შექმენით Tuple -ი და სეცვალეთ მეორე ინდექსზე მყოფი ელემენტი ზუსტად ისე როგორც გაკვეთილზე განახეთ, სბოლოოდ გამოპრინტეთ ახალი tuple ელემენტ შეცვლილი. ახსენით კომენტარებით რომელ ხაზზე რა ხდება. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Tuple Elements</h1>
+   <p>Original Tuple: <span id="original"></span></p>
+   <p>Modified Tuple: <span id="modified"></span></p>
+
+   <script>
+       
+       const originalFruits = ("apple", "banana", "cherry", "date", "elderberry");
+       const modifiedFruits = originalFruits.slice(0, 2).concat("blueberry", originalFruits.slice(3));
+       document.getElementById("original").innerText = originalFruits.join(", ");
+       document.getElementById("modified").innerText = modifiedFruits.join(", ");
+       
+   </script>
+</body>
+</html>

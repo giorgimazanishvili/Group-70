@@ -1,0 +1,21 @@
+<!-- 2) შექმენი Tuple  და შეამოწმე ტაპლში არის თუ არა კონკრეტული ელემენტი. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tuple Elements</h1>
+    <p>Contains 5: <span id="contains"></span></p>
+
+    <script>
+        const numbers = (1, 2, 3, 4, 5);
+        const containsFive = numbers.includes(5);
+        document.getElementById("contains").innerText = containsFive;
+    </script>
+    
+</body>
+</html>

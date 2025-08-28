@@ -1,0 +1,21 @@
+<!-- 1) შექმენი ორი ტაპლი ერთი შეიცავს ციფრებს, მეორე  ფერებს. შემდეგ შექმენი ახალი ტაპლი, რომელიც აერთიანებს ორივეს. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tuple Elements</h1>
+    <p>Combined Tuple: <span id="combined"></span></p>
+
+    <script>
+        const numbers = (1, 2, 3, 4, 5);
+        const colors = ("red", "green", "blue");
+        const combined = numbers.concat(colors);
+        document.getElementById("combined").innerText = combined.join(", ");
+    </script>
+</body>
+</html>
