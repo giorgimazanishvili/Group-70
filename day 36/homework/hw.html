@@ -1,0 +1,31 @@
+<!-- 1) შექმენი dictionary, სადაც key = სტუდენტის სახელი, value = ქულა.
+შემდეგ loop-ით დაბეჭდე ყველა სტუდენტი და ქულა.
+
+dictionary (შეგიძლიათ გამოიყენოთ) :
+scores = {
+    "Ana": 95,
+    "Giorgi": 88,
+    "Luka": 76
+}
+ -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+    scores = {
+        "Ana": 95,
+        "Giorgi": 88,
+        "Luka": 76
+    }
+
+    for (let student in scores) {
+        document.write(student + ": " + scores[student] + "<br>");
+    }
+ </script>
+</body>
+</html>

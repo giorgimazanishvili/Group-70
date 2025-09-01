@@ -1,0 +1,57 @@
+<!-- 6) dictionary ფასებით:
+
+products = {
+    "apple": 3,
+    "banana": 2,
+    "milk": 5
+}
+
+
+დაბეჭდე ყველა პროდუქტი for loop-ით.
+
+მომხმარებლისგან შეიყვანე პროდუქტი, თუ არსებობს → დაბეჭდე ფასი.
+
+დაამატე ახალი პროდუქტი update()-ით.
+
+ბოლოს გამოიყენე clear() ჩასაშენებლად, მაგალითად, ცარიელი dictionary-ს დაბეჭდვა დასუფთავების შემდეგ. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        products = {
+            "apple": 3,
+            "banana": 2,
+            "milk": 5
+        }
+
+        // Print all products
+        for (let product in products) {
+            document.write(product + ": " + products[product] + "<br>");
+        }
+
+        // Get user input
+        let userInput = prompt("Enter a product name:");
+        if (userInput in products) {
+            document.write("Price of " + userInput + ": " + products[userInput] + "<br>");
+        } else {
+            document.write("Product not found.<br>");
+        }
+
+        // Add new product
+        products.update({
+            "bread": 4,
+            "cheese": 6
+        });
+
+        // Clear the dictionary
+        products.clear();
+        document.write("Products after clearing: " + JSON.stringify(products));
+    </script>
+</body>
+</html>

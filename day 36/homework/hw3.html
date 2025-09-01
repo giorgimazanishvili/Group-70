@@ -1,0 +1,35 @@
+<!-- 3) ამ dictionary-ში:
+countries = {
+    "kay": "Georgia",
+    "fr": "France",
+    "it": "Italy"
+}
+
+შეცვალე key "kay" → "ge" pop()-ის გამოყენებით.
+
+დატოვე value უცვლელი. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        countries = {
+            "kay": "Georgia",
+            "fr": "France",
+            "it": "Italy"
+        }
+
+        // Change key "kay" to "ge" using pop()
+        countries["ge"] = countries.pop("kay");
+
+        for (let country in countries) {
+            document.write(country + ": " + countries[country] + "<br>");
+        }
+    </script>
+</body>
+</html>
