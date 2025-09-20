@@ -1,0 +1,37 @@
+<!-- 4) იგივე სამი კვადრატი გამოიყენე, მაგრამ მეორეს მიეცი:
+relative
+გადაადგილე 20px-ით ქვემოთ; 30px-ით მარჯვნივ;
+დააკვირდი რა მოხდება და შედეგი ახსენი კომენტარებით. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .square {
+            width: 100px;
+            height: 100px;
+            position: static;
+        }
+        .red {
+            background-color: red;
+        }
+        .green {
+            background-color: green;
+            position: relative;
+            top: 20px;
+            left: 30px;
+        }
+        .blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="square red"></div>
+    <div class="square green"></div>
+    <div class="square blue"></div>
+</body>
+</html>
