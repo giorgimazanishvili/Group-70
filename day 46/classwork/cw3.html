@@ -1,0 +1,33 @@
+<!-- 3) შექმენი div ბლოკი, რომელშიც იქნება ერთი დიდი ფოტო თქვენი დავალებაა მოაჭრათ ზედმეტი ნაწილი -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>სურათის მოჭრა</title>
+  <style>
+    .photo-container {
+      width: 400px;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+      border: 2px solid #000;
+    }
+
+    .photo-container img {
+      position: absolute;
+      top: 50px; /* გადაადგილება ზემოთ */
+      left: 100px; /* გადაადგილება მარცხნივ */
+      width: 100px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="photo-container">
+    <img src="big-photo.jpg" alt="დიდი ფოტო">
+  </div>
+
+</body>
+</html>
