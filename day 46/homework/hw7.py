@@ -1,0 +1,1 @@
+# 7) გადახედეთ ამ მასალას: https://www.w3schools.com/css/css_overflow.asp
