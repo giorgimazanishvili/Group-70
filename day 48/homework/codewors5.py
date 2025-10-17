@@ -1,0 +1,1 @@
+# 5) https://www.codewars.com/kata/56a4addbfd4a55694100001f/train/python
