@@ -1,0 +1,25 @@
+<!-- 10) შექმენი პატარა ბარათი, რომელსაც hover-ზე აქვს ერთდროულად რამდენიმე transform. მაგ: scale(1.1), rotate(5deg), translateY(-10px), skew(3deg);  დაამატე transition ყველა თვისებაზე ერთდროულად, კომენტარებით ახსენი რა აკეთებს თითოეული transform ცალ-ცალკე  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            width: 200px;
+            height: 300px;
+            background-color: #2ecc71;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.1) rotate(5deg) translateY(-10px) skew(3deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="card"></div>
+</body>
+</html>

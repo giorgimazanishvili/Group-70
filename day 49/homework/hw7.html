@@ -1,0 +1,41 @@
+<!-- 7)  შექმენი სამი განსხვავებული ბლოკი. თითოეულს მიეცი განსხვავებული transform-origin (center, top, bottom), hover-ზე გააკეთე rotation(20deg) და დააკვირდი განსხვავებულ შედეგს. კომენტარებში ახსენი როგორ მოქმედებს transform-origin ეფექტზე -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rotate-div {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            display: inline-block;
+            margin: 10px;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .rotate-div:hover {
+            transform: rotate(20deg);
+        }
+
+        .center {
+            transform-origin: center;
+        }
+
+        .top {
+            transform-origin: top;
+        }
+
+        .bottom {
+            transform-origin: bottom;
+        }
+    </style>
+</head>
+<body>
+    <div class="rotate-div center"></div>
+    <div class="rotate-div top"></div>
+    <div class="rotate-div bottom"></div>       
+</body>
+</html>

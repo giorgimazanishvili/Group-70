@@ -1,0 +1,57 @@
+<!-- 2) შექმენი ინტერაქტიული ბარათების სექცია, სადაც თითო ბარათი შეიცავს სურათს, სათაურს და ტექსტს.
+როდესაც მაუსით შეეხები ბარათს, სხვადასხვა transform ეფექტები ამოქმედდება:
+გადახრა (skew), გადაადგილება (translate), მოტრიალება (rotate), გაზრდა (scale), და ყველაფერი გლუვად (transition). -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card h3 {
+            margin: 0;
+            padding: 16px;
+            background: #f4f4f4;
+        }
+
+        .card p {
+            padding: 16px;
+        }
+
+        .card:hover {
+            transform: skew(5deg) translateY(-5px) rotate(2deg) scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+        <h3>Card Title</h3>
+        <p>This is a description of the card.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- 9) შექმენი ბლოკი, რომელიც თავიდან იქნება დახრილი (skew) და hover-ზე straighten-დება ანუ ბრუნდება საწყის პოზიციაზე. გამოიყენე transform: skew(10deg); და hover-ზე transform: skew(0deg); დაამატე transition, რომ გადახრა ნელა გაქრეს -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .skew-div {
+            width: 200px;
+            height: 200px;
+            background-color: #e74c3c;
+            transform: skew(10deg);
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .skew-div:hover {
+            transform: skew(0deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="skew-div"></div>
+</body>
+</html>

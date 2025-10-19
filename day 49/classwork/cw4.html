@@ -1,0 +1,57 @@
+<!-- 4) შექმენი ვებსაიტზე ღილაკების სექცია, სადაც ყოველი ღილაკი განსხვავებული ფორმით რეაგირებს hover-ზე —
+ერთი მოძრაობს, მეორე იხრება (skew), მესამე ბრუნდება (rotate), მეოთხე იზრდება (scale), მეხუთე კი თავის თავზე "ჩრდილს" აჩენს. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-5px);
+        }
+
+        .button.skew:hover {
+            transform: skew(10deg);
+        }
+
+        .button.rotate:hover {
+            transform: rotate(10deg);
+        }
+
+        .button.scale:hover {
+            transform: scale(1.1);
+        }
+
+        .button.shadow:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <button class="button">Move</button>
+    <button class="button skew">Skew</button>
+    <button class="button rotate">Rotate</button>
+    <button class="button scale">Scale</button>
+    <button class="button shadow">Shadow</button>
+</body>
+</html>
