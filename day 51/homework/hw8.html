@@ -1,0 +1,46 @@
+<!-- 7) გააკეთე ლამაზი progress ბარი, რომელიც width: 0%-დან ნელა იზრდება width: 100%-მდე.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress Bar Animation</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+    }
+
+    #progress-container {
+      width: 100%;
+      background-color: #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    #progress-bar {
+      height: 30px;
+      background-color: #4caf50;
+      width: 0;
+      transition: width 5s;
+    }
+  </style>
+</head>
+<body>
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+
+  <script>
+    // ანიმაციის დაწყება
+    setTimeout(() => {
+      document.getElementById('progress-bar').style.width = '100%';
+    }, 1000);
+  </script>
+</body>
+</html>

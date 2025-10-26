@@ -1,0 +1,13 @@
+ /* 2) ელემენტს შეეცვალოს ფონი თანდათან: წითელი → ყვითელი → მწვანე → ლურჯი → ისევ წითელი (უსასრულოდ). */
+
+.element {
+  animation: colorChange 10s infinite;
+}
+
+@keyframes colorChange {
+  0% { background-color: red; }
+  25% { background-color: yellow; }
+  50% { background-color: green; }
+  75% { background-color: blue; }
+  100% { background-color: red; }
+}

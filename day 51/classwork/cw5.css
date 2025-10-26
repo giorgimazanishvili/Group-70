@@ -1,0 +1,19 @@
+/* 5) ანიმაცია შესრულდეს 2-ჯერ, დივი ზომაში იზრდებოდეს და მცირდებდეს */
+
+@keyframes growShrink {
+  0% {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+  }
+  50% {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+  }
+}

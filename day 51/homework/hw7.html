@@ -1,0 +1,43 @@
+<!-- 6) დაწერე ანიმაცია რომელიც 5 წამში body-ს უცვლის უკანა ფონს სხვადასხვა ფერებით. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ბექგრაუნდის ფერის ანიმაცია</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>გამარჯობა, მსოფლიო!</h1>
+
+  <script>
+    const colors = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33', '#FF33A1'];
+    let currentIndex = 0;
+
+    function changeBackgroundColor() {
+      document.body.style.backgroundColor = colors[currentIndex];
+      currentIndex = (currentIndex + 1) % colors.length;
+    }
+
+    setInterval(changeBackgroundColor, 1000); // 1 წამში ერთხელ
+  </script>
+  <script src="hw7.js"></script>
+</body>
+</html>

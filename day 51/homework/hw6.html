@@ -1,0 +1,57 @@
+<!-- 5) შექმენი ელემენტი რომელიც საიტის (Y ღერძზე) იმოძრავებს. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Y ღერძზე მოძრავი ელემენტი</title>
+  <style>
+    body {
+      height: 100vh;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    #box {
+      width: 100px;
+      height: 100px;
+      background-color: crimson;
+      position: absolute;
+      top: 0;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="box"></div>
+
+  <script>
+    const box = document.getElementById('box');
+    let y = 0;            // საწყისი პოზიცია
+    let direction = 1;    // მოძრაობის მიმართულება (1 = ქვემოთ, -1 = ზემოთ)
+
+    function moveBox() {
+      // მოძრაობა
+      y += direction * 2;
+
+      // საზღვრების შემოწმება
+      if (y > 400 || y < 0) {
+        direction *= -1; // მიმართულების შეცვლა
+      }
+
+      // პოზიციის განახლება
+      box.style.top = y + 'px';
+
+      // ანიმაციის განმეორება
+      requestAnimationFrame(moveBox);
+    }
+
+    // ანიმაციის დაწყება
+    moveBox();
+  </script>
+  <script src="hw6.js"></script>
+</body>
+</html>

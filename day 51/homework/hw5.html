@@ -1,0 +1,91 @@
+<!-- # 4) შექმენი ბარათი, რომელიც hover-ზე ბრუნდება. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>ბრუნვადი ბარათი (HTML + JS)</title>
+  <style>
+    body {
+        
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #f7f7f7, #cbe7ff);
+      font-family: sans-serif;
+    }
+
+    .card {
+      width: 260px;
+      height: 360px;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    /* როცა ბარათს დაემატება კლასის .flipped */
+    .card.flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      backface-visibility: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      transition: background 0.3s ease;
+    }
+
+    .card-front {
+      background: white;
+      color: #333;
+    }
+
+    .card-back {
+      background: #007BFF;
+      color: white;
+      transform: rotateY(180deg);
+    }
+
+    h2 {
+      margin: 0 0 10px;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="flip-card">
+    <div class="card-inner">
+      <div class="card-front">
+        <h2>წინა მხარე</h2>
+        <p>დააჭირე ბარათს შესაბრუნებლად 🔄</p>
+      </div>
+      <div class="card-back">
+        <h2>უკანა მხარე</h2>
+        <p>გილოცავ! ბარათი მოიტრიალა 😎</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
