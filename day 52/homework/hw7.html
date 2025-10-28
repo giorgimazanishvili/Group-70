@@ -1,0 +1,28 @@
+<!-- 7)  შექმენი 2 ცვლადი, სადაც მომხმარებელს შემოატანინებ რიცხვებს. შეამოწმე რომელი რიცხვია დადებითი და რომელი უარყოფითი (გამოიტანეთ console.log()-ით)  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1 = parseFloat(prompt("შეიყვანეთ პირველი რიცხვი:"));
+        let num2 = parseFloat(prompt("შეიყვანეთ მეორე რიცხვი:"));
+
+        if (num1 > 0) {
+            console.log("პირველი რიცხვი დადებითია.");
+        } else {
+            console.log("პირველი რიცხვი უარყოფითია.");
+        }
+
+        if (num2 > 0) {
+            console.log("მეორე რიცხვი დადებითია.");
+        } else {
+            console.log("მეორე რიცხვი უარყოფითია.");
+        }
+    </script>
+</body>
+</html>

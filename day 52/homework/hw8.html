@@ -1,0 +1,37 @@
+<!-- 8) შექმენი 3 ცვლადი, ერთი იყოს რო მომხმარებელს უნდა შემოატანინო მათემატიკური სიმბოლო (+, -, *, /, %), დანარჩენი ორი ცვლადი უნდა იყოს რიცხვები. სიმბოლოს მიხედვით შეასრულე ამ ორ ცვლადში სადაც რიცხვები, არის შესრულდეს მოქმედება. (შედეგი გამოიტანეთ console.log-ით) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1 = parseFloat(prompt("შეიყვანეთ პირველი რიცხვი:"));
+        let num2 = parseFloat(prompt("შეიყვანეთ მეორე რიცხვი:"));
+        let operator = prompt("შეიყვანეთ მათემატიკური ოპერაცია (+, -, *, /, %):");
+
+        switch (operator) {
+            case "+":
+                console.log("სუმა: " + (num1 + num2));
+                break;
+            case "-":
+                console.log("სხვაობა: " + (num1 - num2));
+                break;
+            case "*":
+                console.log("გამრავლება: " + (num1 * num2));
+                break;
+            case "/":
+                console.log("ყოფა: " + (num1 / num2));
+                break;
+            case "%":
+                console.log("მოდული: " + (num1 % num2));
+                break;
+            default:
+                console.log("არასწორი ოპერაცია.");
+        }
+    </script>
+</body>
+</html>
