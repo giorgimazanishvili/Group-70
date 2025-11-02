@@ -1,0 +1,25 @@
+<!-- 14) გააკეთე სურათი, რომელიც დიდ ეკრანზე 400px სიგანისაა, პატარა ეკრანზე კი 200px.
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 400px;
+        }
+
+        @media (max-width: 600px) {
+            img {
+                width: 200px;
+            }
+        }
+    </style>
+ </head>
+ <body>
+    <img src="your-image-source.jpg" alt="Description of image">
+ </body>
+ </html>

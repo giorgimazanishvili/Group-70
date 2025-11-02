@@ -1,0 +1,40 @@
+<!-- 2) შექმენი ორი დივი, ორივე 100×100px.
+მოათავსე ისე, რომ ერთი იყოს მეორეზე ნახევრად.
+დაალაგე ისე, რომ წითელი იყოს ზემოთ. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+        .box1 {
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+        .box2 {
+            background-color: blue;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

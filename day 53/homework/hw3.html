@@ -1,0 +1,42 @@
+<!-- 3) შექმენი სამი სურათი, რომლებიც ერთმანეთს ფარავენ.
+გააკეთე ისე, რომ მესამე სურათი იყოს ყველაზე ზემოთ. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+        }
+        .image1, .image2, .image3 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .image1 {
+            background-color: red;
+            z-index: 1;
+        }
+        .image2 {
+            background-color: blue;
+            z-index: 2;
+        }
+        .image3 {
+            background-color: green;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image1"></div>
+        <div class="image2"></div>
+        <div class="image3"></div>
+    </div>
+</body>
+</html>
