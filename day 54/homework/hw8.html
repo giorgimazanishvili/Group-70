@@ -1,0 +1,61 @@
+<!-- 8) შექმენი ცვლადი სადაც მომხმარებელს შემოატანინებთ  რიცხვს (რიცხვები 1-დან 7-ის ჩათვლით) და ეს იქნება ასე: 1 == ორშაბათი; 2 == სამთაბათი და ასე შემდეგ, თქვენი დავალებაა რიცხვის მიხედვით გამოიტანოთ კვირის დღე. თუ რიცხვი არის 7-ზე მეტი (ანუ სხვა შემთხვევაში) გამოიტანეთ "არასწორი რიცხვი". -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>კვირის დღე რიცხვის მიხედვით</title>
+</head>
+<body>
+    <h2>შეიყვანეთ რიცხვი (1-დან 7-მდე)</h2>
+
+    <input type="number" id="dayNumber" min="1" max="7" placeholder="მაგ: 3">
+    <button onclick="showDay()">გაგზავნა</button>
+
+    <p id="result"></p>
+
+    <script>
+        function showDay() {
+            const dayNumber = parseInt(document.getElementById("dayNumber").value);
+            let result = "";
+
+            switch (dayNumber) {
+                case 1:
+                    result = "ორშაბათი";
+                    break;
+                case 2:
+                    result = "სამშაბათი";
+                    break;
+                case 3:
+                    result = "ოთხშაბათი";
+                    break;
+                case 4:
+                    result = "ხუთშაბათი";
+                    break;
+                case 5:
+                    result = "პარასკევი";
+                    break;
+                case 6:
+                    result = "შაბათი";
+                    break;
+                case 7:
+                    result = "კვირა";
+                    break;
+                default:
+                    result = "არასწორი რიცხვი";
+            }
+
+            document.getElementById("result").textContent = result;
+        }
+    </script>
+</body>
+</html>

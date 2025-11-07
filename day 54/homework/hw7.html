@@ -1,0 +1,22 @@
+<!-- 7) შექმენი ცვლადი სადაც მომხმარებელს შემოატანინებ რიცხვს, შენ უნდა შეამოწმო რიცხვი 0 თუ 0-ზე მეტი, თუ არცერთი პირობა არ არის( ანუ სხვა შემთხვევაში) გამოიტანეთ "რიცხვი არის უარყოფითი". -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number = prompt("შეიყვანეთ რიცხვი:");
+        if (number > 0) {
+            console.log("რიცხვი არის დადებითი.");
+        } else if (number === 0) {
+            console.log("რიცხვი არის ნულოვანი.");
+        } else {
+            console.log("რიცხვი არის უარყოფითი.");
+        }
+    </script>
+</body>
+</html>
