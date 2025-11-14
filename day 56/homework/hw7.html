@@ -1,0 +1,26 @@
+<!-- 7) შექმენი  arrow function სახელად countLetters, რომელსაც გადაეცემა სტრინგი და დააბრუნებს რამდენი ასოა სტრიქონში. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const countLetters = (str) => {
+            let count = 0;
+            for (let char of str) {
+                if (char.toLowerCase() === 'ა') {
+                    count++;
+                }
+            }
+            return count;
+        };
+
+        // ფუნქციის გამოძახება მაგალითისთვის
+        console.log(countLetters("გამარჯობა")); // Output: 3
+    </script>
+</body>
+</html>
