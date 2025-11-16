@@ -1,0 +1,38 @@
+<!-- 5) შექმენი დივი რომელზეც გექნებათ ანიმაცია: როცა მომხმარებელი მაუსს მიიტანს დივზე, 0%-ზე იყოს პატარა, 50% გაიზარდოს 2 ჯერ და 100% გაიზარდოს 3ჯერ. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .animated-div {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            transition: transform 0.5s;
+            transform-origin: center;
+        }
+
+        .animated-div:hover {
+            animation: scaleAnimation 1.5s forwards;
+        }
+
+        @keyframes scaleAnimation {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(2);
+            }
+            100% {
+                transform: scale(3);
+            }
+        }
+    </style>
+    <div class="animated-div"></div>
+</body>
+</html>

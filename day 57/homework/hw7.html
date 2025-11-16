@@ -1,0 +1,29 @@
+<!-- 7) შექმენი ღილაკი რომელიც ჯერ იზრდება hover-ით 2 ჯერ და შემდეგ როცა მომხმარებელი დააწკაპებს ღილაკს 0.5 წამში პატარავდება. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            transition: transform 0.5s ease;
+        }
+
+        button:hover {
+            transform: scale(2);
+        }
+
+        button:active {
+            transform: scale(0.5);
+            transition-duration: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <button>Click Me</button>
+</body>
+</html>

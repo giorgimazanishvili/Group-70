@@ -1,0 +1,26 @@
+<!-- 12) შექმენი textarea, რომელსაც focus-ზე ფონის ფერი ოდნავ უბზინდება (მაგ: უფრო ღია ტონი), ხოლო ტექსტის ჩარჩო ხდება უფრო მკვეთრი. -->
+   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea {
+            padding: 10px;
+            font-size: 16px;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        textarea:focus {
+            background-color: #f0f8ff;
+            border-color: #007BFF;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <textarea placeholder="Type your text here..."></textarea>
+</body>
+</html>

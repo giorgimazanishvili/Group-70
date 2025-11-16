@@ -1,0 +1,29 @@
+<!-- 8) ჩექბოქსის ჩართვაზე გამოაჩინე დამალული ტექსტი.
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <style>
+        #toggle:checked ~ #hidden-text {
+            display: block;
+        }
+
+        #hidden-text {
+            display: none;
+        }
+    </style>
+
+    <input type="checkbox" id="toggle">
+    <label for="toggle">Show hidden text</label>
+
+    <div id="hidden-text">
+        This is the hidden text that appears when the checkbox is checked.
+    </div>
+ </body>
+ </html>

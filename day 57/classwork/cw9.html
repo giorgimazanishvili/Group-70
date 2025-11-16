@@ -1,0 +1,27 @@
+<!-- 9) email input — სწორი ფორმატის შემთხვევაში მოღო მწვანე outline.
+არასწორ შემთხვევაში — წითელი outline. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </form>
+
+    <style>
+        input:valid {
+            outline: 2px solid green;
+        }
+
+        input:invalid {
+            outline: 2px solid red;
+        }
+    </style>
+</body>
+</html>
