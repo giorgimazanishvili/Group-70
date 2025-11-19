@@ -1,0 +1,38 @@
+<!-- 25. switch-ით შეამოწმე score (A/B/C/D/F) და გამოიტანე შეფასება. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let score = "A"; // Change this value to test different scores
+        let evaluation;
+
+        switch(score) {
+            case "A":
+                evaluation = "Excellent";
+                break;
+            case "B":
+                evaluation = "Good";
+                break;
+            case "C":
+                evaluation = "Average";
+                break;
+            case "D":
+                evaluation = "Below Average";
+                break;
+            case "F":
+                evaluation = "Fail";
+                break;
+            default:
+                evaluation = "Invalid score";
+        }
+
+        document.write("Evaluation: " + evaluation);
+    </script>
+</body>
+</html>

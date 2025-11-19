@@ -1,0 +1,24 @@
+<!-- 3. თუ ასაკი < 13 → "child", თუ 13–17 → "teen", სხვა შემთხვევაში "adult".
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = prompt("Enter your age:");
+
+        if (age < 13) {
+            document.write("child");
+        } else if (age >= 13 && age <= 17) {
+            document.write("teen");
+        } else {
+            document.write("adult");
+        }
+    </script>
+</body>
+</html>

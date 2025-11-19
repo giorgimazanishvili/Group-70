@@ -1,0 +1,23 @@
+<!-- 18. while-ით დათვალე ჯამი მხოლოდ კენტ რიცხვებზე 1–30-მდე. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sum = 0;
+        let num = 1;
+        while (num <= 30) {
+            if (num % 2 !== 0) {
+                sum += num;
+            }
+            num++;
+        }
+        document.write("ჯამი კენტ რიცხვებზე 1-დან 30-მდე: " + sum);
+    </script>   
+</body>
+</html>

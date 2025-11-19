@@ -1,0 +1,32 @@
+<!-- 13) მიანიჭე ცვლადს "apple" და switch-ით დაწერე:
+"apple" → "fruit"
+"carrot" → "vegetable"
+default → "unknown" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let item = "apple";
+        let category;
+
+        switch (item) {
+            case "apple":
+                category = "fruit";
+                break;
+            case "carrot":
+                category = "vegetable";
+                break;
+            default:
+                category = "unknown";
+        }
+
+        document.write("The category of " + item + " is: " + category);
+    </script>
+</body>
+</html>

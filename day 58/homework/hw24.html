@@ -1,0 +1,41 @@
+<!-- 24. თვეების ნომრები 1–12 → switch-ით დაბეჭდე სეზონი (winter/spring/summer/autumn).
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        let month = 5; // Change this value to test different months
+
+        switch(month) {
+            case 12:
+            case 1:
+            case 2:
+                console.log("Season is winter.");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                console.log("Season is spring.");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                console.log("Season is summer.");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                console.log("Season is autumn.");
+                break;
+            default:
+                console.log("Invalid month number.");
+        }
+    </script>
+ </body>
+ </html>

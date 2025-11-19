@@ -1,0 +1,24 @@
+<!-- 20. while-ით ჩათვალე რამდენჯერ მოდის 3-ის ჯერადი 1–დან 40-მდე.
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        let count = 0;
+        let num = 1;
+        while (num <= 40) {
+            if (num % 3 === 0) {
+                count++;
+            }
+            num++;
+        }
+        document.write("3-ის ჯერადი რიცხვების რაოდენობა 1-დან 40-მდე: " + count);
+    </script>
+ </body>
+ </html>

@@ -1,0 +1,36 @@
+<!-- 22. რიცხვი 1–4 → season: spring, summer, autumn, winter.
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        let number = 3; // Change this value to test different numbers (1-4)
+        let season;
+
+        switch(number) {
+            case 1:
+                season = "spring";
+                break;
+            case 2:
+                season = "summer";
+                break;
+            case 3:
+                season = "autumn";
+                break;
+            case 4:
+                season = "winter";
+                break;
+            default:
+                season = "Unknown season";
+        }
+
+        document.write("Season: " + season);
+    </script>
+ </body>
+ </html>
