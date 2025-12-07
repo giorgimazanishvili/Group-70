@@ -1,0 +1,45 @@
+<!-- 5) შექმენი კონტეინერი display: flex-ით
+შიგნით სამი ელემენტი განათავსე
+თითოეულს დაუსვი განსხვავებული flex-grow მნიშვნელობა
+(მაგ. 1, 2, 3)
+აჩვენე როგორ იზრდება ელემენტები თავისუფალი სივრცის მიხედვით. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+.container {
+  width: 600px;
+  height: 150px;
+  background: #eee;
+  display: flex; 
+  gap: 10px;
+}
+
+.box1 {
+  flex-grow: 1; 
+  background: #a8d1ff;
+}
+
+.box2 {
+  flex-grow: 2;  
+  background: #7db8ff;
+}
+
+.box3 {
+  flex-grow: 3; 
+  background: #559eff;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="box1">1-grow</div>
+  <div class="box2">2-grow</div>
+  <div class="box3">3-grow</div>
+</div>
+
+</body>
+</html>

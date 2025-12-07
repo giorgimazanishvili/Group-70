@@ -1,0 +1,49 @@
+<!-- 6) შექმენი ვიწრო კონტეინერი (მაგ. width: 200px)
+მოათავსე სამი ელემენტი flex-ში
+თითოეულს მომდე განსხვავებული flex-shrink
+(მაგ. 0, 1, 3)
+აჩვენე როგორ იკლებს ელემენტების ზომა ადგილის ნაკლებობისას
+
+ასევე გაითალისწინეთ რომ ჯგუფური სამუშაოსთვის გაქვთ გასაკეთებელი 1) ვებსაიტი ნებისმიერ თემაზე, უნდა იყოს კარგად გასტილული
+2) მეორე to do list-ის პროექტი python-ით -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+.container {
+  width: 200px;
+  display: flex;
+  background: #eee;
+  gap: 5px;
+}
+
+.box1 {
+  width: 100px;
+  flex-shrink: 0;
+  background: #a8d1ff;
+}
+
+.box2 {
+  width: 100px;
+  flex-shrink: 1;
+  background: #7db8ff;
+}
+
+.box3 {
+  width: 100px;
+  flex-shrink: 3;
+  background: #559eff;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="box1">shrink 0</div>
+  <div class="box2">shrink 1</div>
+  <div class="box3">shrink 3</div>
+</div>
+
+</body>
+</html>
