@@ -1,11 +1,11 @@
-// ობიექტის შექმნა
 const user = {
-  age: 22,   // მაგალითად
-
-  checkStatus() {
-    return this.age >= 18 ? "Adult" : "Minor";
+  age: 14,
+  checkAge () {
+    if (this.age >= 18){
+      return "შენ ხარ სრულწლოვანი"
+    } else {
+      return "შენ არ ხარ სრულწლოვანი"
+    }
   }
-};
-
-// გამოყენება:
-console.log(user.checkStatus()); // Adult
+}
+console.log (user.checkAge())

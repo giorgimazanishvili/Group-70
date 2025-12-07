@@ -1,10 +1,13 @@
 const car = {
-  speed: 100,  // მაგალითის მნიშვნელობა
+  speed: 120,
 
-  checkSpeed() {
-    return this.speed > 120 ? "Too fast" : "Speed okay";
+  checkspeed() {
+    if (this.speed >= 130) {
+      return "შენი შიჩქარე მეტია"
+    } else {
+      return "შენი შიჩქარე ნაკლებია"
+    }
   }
-};
+}
 
-// გამოყენება:
-console.log(car.checkSpeed()); // Speed okay
+console.log (car.checkspeed())

@@ -1,10 +1,13 @@
 const student = {
-  score: 75, // მაგალითი
+  score: 80,
+  
+  checkstudent() {
+    if (this.score >= 50){
+       return "passed"
+    } else {
+      return "failed"
+    }
+  } 
+}
 
-  checkResult() {
-    return this.score >= 50 ? "Passed" : "Failed";
-  }
-};
-
-// გამოყენება:
-console.log(student.checkResult()); // Passed
+console.log (student.checkstudent())
