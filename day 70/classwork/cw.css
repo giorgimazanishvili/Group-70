@@ -1,0 +1,11 @@
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: blue; /* desktop */
+}
+
+@media (max-width: 600px) {
+  .box {
+    background-color: red; /* < 600px */
+  }
+}

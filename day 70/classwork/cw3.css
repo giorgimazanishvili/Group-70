@@ -1,0 +1,10 @@
+.text {
+  font-size: 16px;
+}
+
+/* ტელეფონზე დამალვა */
+@media (max-width: 480px) {
+  .text {
+    display: none;
+  }
+}

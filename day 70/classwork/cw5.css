@@ -1,0 +1,20 @@
+.container {
+  display: flex; /* desktop-ზე ერთ ხაზზე */
+  gap: 20px;
+}
+
+.item {
+  width: 150px;
+  height: 100px;
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* ერთმანეთის ქვეშ */
+  }
+}

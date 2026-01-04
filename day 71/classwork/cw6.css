@@ -1,0 +1,10 @@
+#box {
+  padding: 20px;
+  background-color: lightgray;
+  margin-bottom: 10px;
+}
+
+.active {
+  background-color: lightgreen;
+  color: black;
+}
