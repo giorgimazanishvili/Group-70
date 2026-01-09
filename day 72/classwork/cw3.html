@@ -1,0 +1,85 @@
+<!-- 3) ამის შემდეგ შექმენი წრე, რომელიც უსასრულოდ ხტუნავს — მოძრაობა უნდა იყოს ზემოთ და ქვემოთ (translateY(0 → -40px → 0)), შესრულდეს @keyframes-ით და იმეორებდეს უსასრულოდ. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML + CSS ანიმაციები</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      gap: 30px;
+      background-color: #f5f5f5;
+      font-family: sans-serif;
+    }
+
+    /* 1) ნელა გამოჩენილი div */
+    .fade-box {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+      background: white;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* 2) ღილაკი hover-ზე იზრდება */
+    .btn {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      border-radius: 6px;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+    }
+
+    /* 3) უსასრულოდ ხტუნავი წრე */
+    .bouncing-circle {
+      width: 50px;
+      height: 50px;
+      background-color: #ff5722;
+      border-radius: 50%;
+      animation: bounce 1s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-40px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="fade-box">ნელა გამოჩენილი div</div>
+
+  <button class="btn">ღილაკი</button>
+
+  <div class="bouncing-circle"></div>
+
+</body>
+</html>

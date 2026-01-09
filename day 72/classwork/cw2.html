@@ -1,0 +1,28 @@
+<!-- 2) შემდეგ გააკეთე ღილაკი, რომელიც მაუსის გადატარებისას ოდნავ გაიზრდება (scale(1.1)), და ეს ცვლილება იყოს რბილი transition-ის დახმარებით, დაახლოებით 0.3 წამში. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .btn {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <button class="btn">ღილაკი</button>
+
+</body>
+</html>
