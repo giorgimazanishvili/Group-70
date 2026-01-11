@@ -1,0 +1,44 @@
+<!-- 5)დაამატე და წაშალე CSS კლასები ელემენტიდან (მაგალითად ფერის შეცვლა ან ტექსტის გამოჩენა/დამალვა).
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS კლასების დამატება და წაშლა</title>
+  <style>
+    .red {
+      color: red;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <p id="text">ეს არის ტექსტი</p>
+
+  <button onclick="addClass()">ფერის შეცვლა</button>
+  <button onclick="removeClass()">ფერის დაბრუნება</button>
+  <button onclick="toggleText()">ტექსტის დამალვა/გამოჩენა</button>
+
+  <script>
+    const text = document.getElementById("text");
+
+    function addClass() {
+      text.classList.add("red"); // კლასის დამატება
+    }
+
+    function removeClass() {
+      text.classList.remove("red"); // კლასის წაშლა
+    }
+
+    function toggleText() {
+      text.classList.toggle("hidden"); // დამალვა / გამოჩენა
+    }
+  </script>
+
+</body>
+</html>
