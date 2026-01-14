@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f2f2f2;
+}
+
+.face {
+    display: flex;
+    gap: 40px;
+}
+
+/* თვალი */
+.eye {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    animation: blink 4s infinite;
+}
+
+/* გუგა */
+.pupil {
+    width: 25px;
+    height: 25px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    animation: look 2s infinite alternate;
+}
+
+/* თვალის დახამხამება */
+@keyframes blink {
+    0%, 90%, 100% {
+        transform: scaleY(1);
+    }
+    95% {
+        transform: scaleY(0.1);
+    }
+}
+
+/* გუგის მოძრაობა */
+@keyframes look {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(15px);
+    }
+    100% {
+        transform: translateX(-15px);
+    }
+}

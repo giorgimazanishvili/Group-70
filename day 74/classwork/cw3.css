@@ -1,0 +1,28 @@
+/* ბურთის სტილი */
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: #ff4b5c;
+  border-radius: 50%;
+  position: relative;
+  animation: bounce 2s infinite;
+}
+
+
+/* ბურთის  ანიმაცია */
+
+@keyframes bounce {
+  0% {
+    top: 0;
+    transform: scaleX(1); /* ნორმალური ფორმა ზემოთ */
+  }
+  50% {
+    top: 200px;
+    transform: scaleX(1.3); /* დაბლა ჩამოსვლისას ფართოვდება */
+  }
+  100% {
+    top: 0;
+    transform: scaleX(1); /* ისევ ნორმალური ფორმა ზემოთ */
+  }
+}

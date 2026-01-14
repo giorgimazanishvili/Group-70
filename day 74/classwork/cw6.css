@@ -1,0 +1,26 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.led-text {
+    font-size: 64px;
+    font-family: Arial, sans-serif;
+    text-shadow:
+        0 0 10px currentColor,
+        0 0 20px currentColor,
+        0 0 40px currentColor;
+    animation: led 3s linear infinite;
+}
+
+@keyframes led {
+    0%   { color: rgb(0, 0, 0); }
+    20%  { color: rgb(0, 255, 149); }
+    40%  { color: yellow; }
+    60%  { color: lime; }
+    80%  { color: cyan; }
+    100% { color: magenta; }
+}
