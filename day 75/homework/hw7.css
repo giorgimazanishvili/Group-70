@@ -1,0 +1,13 @@
+#myInput {
+  width: 250px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s, color 0.3s; /* გლუვი ცვლილება */
+}
+
+/* როცა input დაკარგავს ფოკუსს */
+#myInput:blur { /* ⚠ CSS-ში :blur არ არსებობს! */
+  background-color: pink; /* ვარდისფერი ფონური ფერი */
+  color: white;            /* ტექსტის ფერი თეთრი */
+}

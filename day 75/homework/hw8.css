@@ -1,0 +1,13 @@
+#myInput {
+  width: 250px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  transition: border-color 0.2s;
+}
+
+/* აკრძალვის შემთხვევაში */
+#myInput.error {
+  border-color: red;      /* წითელი საზღვარი */
+  background-color: #ffe6e6; /* ფონის ცვლილება ალტერნატიული ვიზუალური ეფექტისთვის */
+}

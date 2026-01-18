@@ -1,0 +1,25 @@
+<!-- 2) keydown
+დავალება:
+შექმენით input ველი
+აკრძალეთ ასოები: a, b, c
+დანარჩენი ასოები აკრეფას შეძლებენ -->
+
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Keydown</title>
+</head>
+<body>
+
+<input type="text"
+       placeholder="Type here"
+       onkeydown="
+        if (event.key === 'a' || event.key === 'b' || event.key === 'c') {
+            return false;
+        }
+       ">
+
+</body>
+</html>

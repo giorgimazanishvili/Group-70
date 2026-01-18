@@ -1,0 +1,26 @@
+<!-- 3) keyup
+დავალება:
+შექმენით input ველი
+ტექსტის აკრეფის შემდეგ (ყოველ ღილაკის გაშვებისას)
+გამოჩნდეს: „You typed X characters“ -->
+
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Keyup</title>
+</head>
+<body>
+
+<input type="text"
+       placeholder="Type here"
+       onkeyup="
+        document.getElementById('result').innerText =
+        'You typed ' + this.value.length + ' characters';
+       ">
+
+<p id="result">You typed 0 characters</p>
+
+</body>
+</html>

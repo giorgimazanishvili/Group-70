@@ -1,0 +1,14 @@
+#myInput {
+  width: 250px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s, box-shadow 0.3s; /* გლუვი ეფექტი */
+}
+
+/* როცა input ფოკუსშია */
+#myInput:focus {
+  background-color: #4CAF50; /* მწვანე ფონური ფერი */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* ჩრდილი */
+  outline: none; /* სტანდარტული ჩარჩოს ხაზი გაქრობა */
+}
