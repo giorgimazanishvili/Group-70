@@ -1,0 +1,12 @@
+/* Desktop */
+.responsive-section {
+  padding: 40px;
+  background-color: #f2f2f2;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .responsive-section {
+    padding: 15px;
+  }
+}

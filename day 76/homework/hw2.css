@@ -1,0 +1,13 @@
+:root {
+  --main-color: lightseagreen;
+  --border-radius: 20px;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: var(--main-color);
+  border-radius: var(--border-radius);
+  margin: 10px;
+  display: inline-block;
+}

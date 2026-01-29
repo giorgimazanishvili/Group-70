@@ -1,0 +1,13 @@
+.text-with-dot {
+  font-size: 18px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.text-with-dot::before {
+  content: "●";
+  color: blue;   /* წრის ფერი */
+  position: absolute;
+  left: 0;
+  top: 0;
+}

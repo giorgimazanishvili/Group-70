@@ -1,0 +1,35 @@
+/* 
+  :root-ში ვქმნით გლობალურ ცვლადებს:
+  --main-color   -> გამოიყენება body ფონისთვის
+  --secondar-color -> გამოიყენება h1 ტექსტის ფერისთვის
+*/
+:root {
+  --main-color: #f0f8ff;       /* body ფონი */
+  --secondar-color: #e74c3c;   /* h1 ტექსტი */
+}
+
+/* 
+  body სტილი:
+  background-color-ში ვიყენებთ --main-color ცვლადს
+  ტექსტი ცენტრირდება ეკრანის შუაში
+*/
+body {
+  background-color: var(--main-color); /* მთავარი ფერი */
+  font-family: Arial, sans-serif;      /* მარტივი ფონტი */
+  display: flex;                        /* ელემენტის ცენტრირება */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;                        /* სრული ეკრანის სიმაღლე */
+  margin: 0;                             /* default margin-ის მოცილება */
+  flex-direction: column;               /* ელემენტები ვერტიკალურად */
+}
+
+/* 
+  h1 სტილი:
+  color-ში ვიყენებთ --secondar-color ცვლადს
+*/
+h1 {
+  color: var(--secondar-color); /* მეორეული ფერი */
+  font-size: 48px;               /* ტექსტის ზომა */
+  margin: 0;                     /* ზედმეტი სივრცის მოცილება */
+}

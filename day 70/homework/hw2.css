@@ -1,0 +1,11 @@
+.card-text {
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+  .card-text {
+    text-align: left;
+  }
+}

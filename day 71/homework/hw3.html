@@ -1,0 +1,41 @@
+<!-- 3) შექმენი ფოტო <img> ელემენტი და ღილაკი. innerHTML-ის ნაცვლად ატრიბუტის ცვლილებით შეცვალე ფოტოს წყარო და დაამატე classList.add() ახალი სტილისთვის.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>ფოტოს შეცვლა და სტილის დამატება</title>
+
+  <style>
+    .newStyle {
+      border: 4px solid red;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- ფოტო ელემენტი -->
+  <img id="myPhoto" src="image1.jpg" alt="ფოტო" width="300">
+
+  <!-- ღილაკი -->
+  <button id="changePhotoBtn">ფოტოს შეცვლა</button>
+
+  <script>
+    const photo = document.getElementById('myPhoto');
+    const btn = document.getElementById('changePhotoBtn');
+
+    btn.addEventListener('click', () => {
+      // ფოტოს წყაროს შეცვლა
+      photo.setAttribute('src', 'image2.jpg');
+
+      // CSS კლასის დამატება
+      photo.classList.add('newStyle');
+    });
+  </script>
+
+</body>
+</html>

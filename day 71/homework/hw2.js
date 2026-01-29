@@ -1,0 +1,1 @@
+document.getElementById("notification").innerHTML = "New message received!";

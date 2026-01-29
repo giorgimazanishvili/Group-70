@@ -1,0 +1,17 @@
+.custom-list {
+  list-style: none; /* სტანდარტული bullet-ების გამორთვა */
+  padding-left: 0;
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 25px; /* ადგილი სიმბოლოსთვის */
+}
+
+.custom-list li::before {
+  content: "✓";      /* შენი სიმბოლო */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: green;
+}

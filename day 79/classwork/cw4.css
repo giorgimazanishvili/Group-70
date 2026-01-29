@@ -1,0 +1,14 @@
+.title-underline {
+  position: relative;
+  display: inline-block; /* რომ ხაზი ტექსტის სიგრძეზე იყოს */
+}
+
+.title-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;          /* ტექსტის ქვემოთ დაშორება */
+  width: 100%;
+  height: 3px;           /* ხაზის სისქე */
+  background-color: black;
+}

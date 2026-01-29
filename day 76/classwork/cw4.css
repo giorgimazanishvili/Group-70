@@ -1,0 +1,33 @@
+/* 
+  :root-ში ვქმნით ღილაკისთვის საჭირო ცვლადებს:
+  --btn-bg     -> ღილაკის ნორმალური ფონი
+  --btn-hover  -> hover ეფექტის ფონი
+*/
+:root {
+  --btn-bg: #3498db;      /* ღილაკის მთავარი ფერი */
+  --btn-hover: #2980b9;   /* ღილაკის ფერი hover-ზე */
+}
+
+/* 
+  .btn კლასი:
+  იყენებს --btn-bg ცვლადს ნორმალური ფონისთვის
+  და --btn-hover ცვლადს hover ეფექტისთვის
+*/
+.btn {
+  background-color: var(--btn-bg); /* ღილაკის ფონი */
+  color: white;                    /* ტექსტის ფერი */
+  padding: 12px 24px;              /* შიგთავსის ზომა */
+  border: none;                    /* საზღვრის მოცილება */
+  border-radius: 5px;              /* მოყვანილი კუთხეები */
+  cursor: pointer;                 /* მაუსის კურსორის შეცვლა */
+  font-size: 16px;                 /* ტექსტის ზომა */
+  transition: background-color 0.3s; /* რბილი ცვლილება hover-ზე */
+}
+
+/* 
+  hover ეფექტი:
+  როდესაც მაუსი გადადის ღილაკზე, ფონი იცვლება --btn-hover ცვლადის მიხედვით
+*/
+.btn:hover {
+  background-color: var(--btn-hover); /* hover ფონი */
+}

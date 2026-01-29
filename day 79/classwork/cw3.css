@@ -1,0 +1,16 @@
+.btn-line {
+  position: relative;
+  padding: 10px 20px 10px 30px; /* მარცხნივ ადგილი ხაზისთვის */
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-line::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 4px;          /* ხაზის სიგანე */
+  height: 100%;        /* ღილაკის სრული სიმაღლე */
+  background-color: red;
+}

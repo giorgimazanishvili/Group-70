@@ -1,0 +1,11 @@
+/* Desktop-ზე ჩანს */
+.responsive-img {
+  display: block;
+}
+
+/* Tablet და ქვემოთ (1024px) იმალება */
+@media (max-width: 1024px) {
+  .responsive-img {
+    display: none;
+  }
+}

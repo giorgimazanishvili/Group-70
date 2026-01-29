@@ -1,0 +1,29 @@
+/* Light mode (default) */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: sans-serif;
+  transition: 0.3s;
+}
+
+.content {
+  padding: 20px;
+}
+
+/* Checkbox დამალვა */
+#mode-toggle {
+  display: none;
+}
+
+/* Dark mode */
+#mode-toggle:checked ~ .content,
+#mode-toggle:checked ~ body {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* უკეთესი ვერსია body-სთვის */
+#mode-toggle:checked ~ .content {
+  background-color: #121212;
+  color: #ffffff;
+}

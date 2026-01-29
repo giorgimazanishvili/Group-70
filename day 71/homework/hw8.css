@@ -1,0 +1,14 @@
+#box {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.bg-change {
+  background-color: lightblue;
+}
+
+.text-change {
+  color: red;
+}

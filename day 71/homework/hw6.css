@@ -1,0 +1,13 @@
+button {
+  margin: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.correct {
+  background-color: lightgreen;
+}
+
+.wrong {
+  background-color: lightcoral;
+}

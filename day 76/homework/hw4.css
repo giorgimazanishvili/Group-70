@@ -1,0 +1,19 @@
+:root {
+  --main-color: cornflowerblue;
+}
+
+.polygon {
+  width: 250px;
+  height: 250px;
+  background-color: var(--main-color);
+
+  clip-path: polygon(
+    50% 0%,
+    90% 20%,
+    100% 60%,
+    75% 100%,
+    25% 100%,
+    0% 60%,
+    10% 20%
+  );
+}

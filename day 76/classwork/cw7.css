@@ -1,0 +1,33 @@
+/* 
+  :root-ში ვქმნით ორი ცვლადს:
+  --box-color      -> ყუთის ნორმალური ფონი
+  --box-hover-color -> ყუთის ფონი hover-ზე
+*/
+:root {
+  --box-color: #3498db;         /* ნორმალური ფონი (ლურჯი) */
+  --box-hover-color: #2ecc71;   /* hover ფონი (მწვანე) */
+}
+
+/* 
+  .box კლასი:
+  - სიგანე და სიმაღლე 150px
+  - ფონი იღებს --box-color ცვლადს
+  - cursor:pointer რომ მაუსი თითს მაგივრად შეიცვალოს
+  - transition რბილი ცვლილებისთვის
+*/
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: var(--box-color); /* ნორმალური ფონი */
+  margin: 50px auto;                  /* ცენტრირება გვერდზე */
+  cursor: pointer;                     /* მაუსის კურსორი pointer */
+  transition: background-color 0.3s;  /* რბილი ფერის ცვლილება */
+}
+
+/* 
+  hover ეფექტი:
+  როდესაც მაუსი მიდის ყუთზე, ფონი იცვლება --box-hover-color ცვლადის მიხედვით
+*/
+.box:hover {
+  background-color: var(--box-hover-color);
+}
