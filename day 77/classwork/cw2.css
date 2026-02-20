@@ -1,0 +1,19 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background-color: #fdf6e3;
+}
+
+button {
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+#output {
+  background-color: #ffffff;
+  padding: 15px;
+  border: 1px solid #ccc;
+  width: fit-content;
+  min-width: 200px;
+}
