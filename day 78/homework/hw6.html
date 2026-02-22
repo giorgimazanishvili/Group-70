@@ -1,0 +1,43 @@
+<!-- 6) შექმენი რიცხვების მასივი 2, 4, 6, 8, 10, 12.
+თითოეული რიცხვი გაზარდე 3-ჯერ,
+დატოვე მხოლოდ ის შედეგები, რომლებიც 20-ს არ აღემატება,
+გამოთვალე მათი ჯამი
+და დაბეჭდე ყველაზე პატარა მიღებული რიცხვი.
+ -->
+
+ <!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>მასივი - 3-ჯერ გაზრდა</title>
+</head>
+<body>
+
+<h2>შედეგი:</h2>
+<p id="result"></p>
+
+<script>
+    // 1. რიცხვების მასივი
+    let numbers = [2, 4, 6, 8, 10, 12];
+
+    // 2. თითოეული რიცხვის 3-ჯერ გაზრდა
+    let tripled = numbers.map(num => num * 3);
+
+    // 3. მხოლოდ 20-ს არ აღემატება (<=20)
+    let filtered = tripled.filter(num => num <= 20);
+
+    // 4. მათი ჯამის გამოთვლა
+    let sum = filtered.reduce((acc, curr) => acc + curr, 0);
+
+    // 5. ყველაზე პატარა მიღებული რიცხვი
+    let smallest = Math.min(...filtered);
+
+    // შედეგის გამოტანა
+    document.getElementById("result").innerHTML =
+        "დარჩენილი რიცხვები: " + filtered + "<br>" +
+        "ჯამი: " + sum + "<br>" +
+        "ყველაზე პატარა რიცხვი: " + smallest;
+</script>
+
+</body>
+</html>

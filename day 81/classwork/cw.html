@@ -1,0 +1,40 @@
+<!-- 1) მოცემულია პროდუქტების კატეგორიების მასივი (მაგ: "ტექნიკა", "ტანსაცმელი", "ტექნიკა", "საკვები" და ა.შ). დაწერეთ პროგრამა, რომელიც დაითვლის რამდენი პროდუქტი ეკუთვნის თითოეულ კატეგორიას და შედეგს შეინახავს ობიექტში. ამოცანა შეასრულეთ reduce მეთოდის გამოყენებით.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>reduce - კატეგორიების დათვლა</title>
+</head>
+<body>
+
+<script>
+    // პროდუქტების კატეგორიების მასივი
+    let categories = [
+        "ტექნიკა",
+        "ტანსაცმელი",
+        "ტექნიკა",
+        "საკვები",
+        "საკვები",
+        "ტექნიკა"
+    ];
+
+    // reduce გამოყენებით დათვლა
+    let result = categories.reduce(function(accumulator, category) {
+        
+        if (accumulator[category]) {
+            accumulator[category] += 1;
+        } else {
+            accumulator[category] = 1;
+        }
+
+        return accumulator;
+        
+    }, {});
+
+    console.log(result);
+</script>
+
+</body>
+</html>

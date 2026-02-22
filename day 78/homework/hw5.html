@@ -1,0 +1,39 @@
+<!-- 5) შექმენი რიცხვების მასივი 4, 8, 12, 16, 20.
+თითოეული რიცხვი გაყავი 2-ზე,
+იპოვე მიღებული რიცხვების საშუალო არითმეტიკული,
+დაამრგვალე შედეგი მთელ რიცხვამდე
+და დაბეჭდე საბოლოო პასუხი. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>საშუალო არითმეტიკული</title>
+</head>
+<body>
+
+<h2>საბოლოო პასუხი:</h2>
+<p id="result"></p>
+
+<script>
+    // 1. რიცხვების მასივი
+    let numbers = [4, 8, 12, 16, 20];
+
+    // 2. თითოეული რიცხვის გაყოფა 2-ზე
+    let divided = numbers.map(num => num / 2);
+
+    // 3. ჯამის პოვნა
+    let sum = divided.reduce((acc, curr) => acc + curr, 0);
+
+    // 4. საშუალო არითმეტიკული
+    let average = sum / divided.length;
+
+    // 5. დამრგვალება მთელ რიცხვამდე
+    let rounded = Math.round(average);
+
+    // 6. საბოლოო პასუხის გამოტანა
+    document.getElementById("result").textContent = rounded;
+</script>
+
+</body>
+</html>

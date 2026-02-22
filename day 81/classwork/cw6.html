@@ -1,0 +1,44 @@
+<!-- 6) მოცემულია რესტორნის შეკვეთების სია, სადაც თითოეულ შეკვეთას აქვს კერძის ფასი და რაოდენობა. დაწერეთ პროგრამა, რომელიც თითოეული შეკვეთის ღირებულებას გამოთვლის და შემდეგ დაადგენს ყველა შეკვეთის საერთო შემოსავალს. ამოცანა შეასრულეთ forEach და reduce მეთოდების გამოყენებით. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>რესტორნის შეკვეთები</title>
+</head>
+<body>
+
+    <h2>რესტორნის შეკვეთები</h2>
+    <ul id="orderList"></ul>
+    <h3 id="totalRevenue"></h3>
+
+    <script>
+        // შეკვეთების სია
+        const orders = [
+            { name: "ხინკალი", price: 1.5, quantity: 10 },
+            { name: "ხაჭაპური", price: 12, quantity: 3 },
+            { name: "შაურმა", price: 8, quantity: 5 }
+        ];
+
+        const orderList = document.getElementById("orderList");
+
+        // თითოეული შეკვეთის ღირებულების გამოთვლა (forEach)
+        orders.forEach(order => {
+            order.total = order.price * order.quantity;
+
+            const li = document.createElement("li");
+            li.textContent = `${order.name} - ${order.quantity} ცალი - ღირებულება: ${order.total} ლარი`;
+            orderList.appendChild(li);
+        });
+
+        // საერთო შემოსავლის დათვლა (reduce)
+        const totalRevenue = orders.reduce((sum, order) => {
+            return sum + order.total;
+        }, 0);
+
+        document.getElementById("totalRevenue").textContent =
+            `საერთო შემოსავალი: ${totalRevenue} ლარი`;
+    </script>
+
+</body>
+</html>

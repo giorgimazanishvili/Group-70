@@ -1,0 +1,39 @@
+<!-- 5)შექმენი რიცხვების მასივი 5, 7, 3, 8, 6. map მეთოდით თითოეულ რიცხვს დაუმატე 2, filter მეთოდით დატოვე მხოლოდ 10-ზე მეტი რიცხვები, reduce მეთოდით იპოვე საშუალო და დაბეჭდე მთლიანი რიცხვი.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>Map, Filter, Reduce</title>
+</head>
+<body>
+
+<h3>მასივის დამუშავება</h3>
+<div id="output"></div>
+
+<script>
+  // 1) საწყისი მასივი
+  const numbers = [5, 7, 3, 8, 6];
+
+  // 2) map - თითოეულ რიცხვს დავუმატოთ 2
+  const plusTwo = numbers.map(num => num + 2);
+
+  // 3) filter - მხოლოდ 10-ზე მეტი რიცხვები
+  const filtered = plusTwo.filter(num => num > 10);
+
+  // 4) reduce - საშუალოს პოვნა
+  const sum = filtered.reduce((acc, curr) => acc + curr, 0);
+  const average = filtered.length > 0 ? Math.floor(sum / filtered.length) : 0;
+
+  // შედეგის გამოტანა
+  document.getElementById("output").innerHTML = `
+    <p>საწყისი მასივი: ${numbers}</p>
+    <p>+2: ${plusTwo}</p>
+    <p>10-ზე მეტი: ${filtered}</p>
+    <p>საშუალო (მთლიანი რიცხვი): ${average}</p>
+  `;
+</script>
+
+</body>
+</html>

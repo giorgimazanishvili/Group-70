@@ -1,0 +1,42 @@
+<!-- 
+4) შექმენი რიცხვების მასივი -10, -3, 0, 4, 7, 12.
+filter მეთოდით მოაშორე ნულზე ნაკლები რიცხვები,
+map მეთოდით თითოეულ დარჩენილ რიცხვს გამოაკელი 1,
+filter მეთოდით დატოვე მხოლოდ კენტი რიცხვები
+და forEach მეთოდით დაბეჭდე ისინი. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>Filter, Map, forEach</title>
+</head>
+<body>
+
+<h3>რიცხვების დამუშავება</h3>
+<div id="output"></div>
+
+<script>
+  // 1) საწყისი მასივი
+  const numbers = [-10, -3, 0, 4, 7, 12];
+
+  // 2) filter - ნულზე ნაკლები რიცხვების მოცილება
+  const nonNegative = numbers.filter(num => num >= 0);
+
+  // 3) map - თითოეულ რიცხვს გამოვაკლებოთ 1
+  const subtracted = nonNegative.map(num => num - 1);
+
+  // 4) filter - მხოლოდ ლუწი რიცხვები
+  const evenNumbers = subtracted.filter(num => num % 2 === 0);
+
+  // 5) forEach - დაბეჭდვა
+  let result = "";
+  evenNumbers.forEach(num => {
+    result += num + "<br>";
+  });
+
+  document.getElementById("output").innerHTML = result;
+</script>
+
+</body>
+</html>

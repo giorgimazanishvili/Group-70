@@ -1,0 +1,33 @@
+<!-- 2) შექმენი სათაური (h1) და ::after-ით დაუმატე ქვედა ხაზი, რომლის სიგანე გამოითვლება calc(100% / 2). -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<title>h1 ::after მაგალითი</title>
+
+<style>
+    h1 {
+        position: relative;
+        display: inline-block;
+        font-size: 36px;
+    }
+
+    h1::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        height: 4px;
+        background-color: #e74c3c;
+        width: calc(100% / 2); /* სათაურის სიგანის ნახევარი */
+    }
+</style>
+
+</head>
+<body>
+
+<h1>სათაური</h1>
+
+</body>
+</html>

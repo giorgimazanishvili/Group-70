@@ -1,0 +1,37 @@
+<!-- 4)შექმენი რიცხვების მასივი -5, 2, 3, 7, -1, 9. filter მეთოდით დატოვე მხოლოდ დადებითი რიცხვები, filter მეთოდით დატოვე მხოლოდ კენტი რიცხვები, map მეთოდით თითოეული გაამრავლე 5-ზე და forEach მეთოდით დაბეჭდე შედეგები. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>Filter, Map, forEach</title>
+</head>
+<body>
+
+<h3>მასივის დამუშავება</h3>
+<div id="output"></div>
+
+<script>
+  // 1) საწყისი მასივი
+  const numbers = [-5, 2, 3, 7, -1, 9];
+
+  // 2) filter - მხოლოდ დადებითი რიცხვები
+  const positive = numbers.filter(num => num > 0);
+
+  // 3) filter - მხოლოდ კენტი რიცხვები
+  const odd = positive.filter(num => num % 2 !== 0);
+
+  // 4) map - თითოეულის გამრავლება 5-ზე
+  const multiplied = odd.map(num => num * 5);
+
+  // 5) forEach - თითოეულის დაბეჭდვა
+  let result = "";
+  multiplied.forEach(num => {
+    result += num + "<br>";
+  });
+
+  document.getElementById("output").innerHTML = result;
+</script>
+
+</body>
+</html>

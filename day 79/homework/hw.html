@@ -1,0 +1,36 @@
+<!-- 1) შექმენი div ბლოკი ფიქსირებული სიგანით და ::before-ის გამოყენებით დაამატე ხაზი, რომლის სიგანე იქნება calc(100% - 40px). -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<title>::before + calc() მაგალითი</title>
+
+<style>
+    .box {
+        width: 400px;          /* ფიქსირებული სიგანე */
+        height: 150px;
+        background-color: #f2f2f2;
+        margin: 50px auto;
+        position: relative;
+        border: 1px solid #ccc;
+    }
+
+    .box::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        height: 4px;
+        background-color: #3498db;
+        width: calc(100% - 40px); /* 100% - 40px */
+    }
+</style>
+
+</head>
+<body>
+
+<div class="box"></div>
+
+</body>
+</html>

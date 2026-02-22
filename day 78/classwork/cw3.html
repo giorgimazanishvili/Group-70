@@ -1,0 +1,42 @@
+<!-- 
+3) შექმენი რიცხვების მასივი 1, 2, 3, 4, 5, 6.
+map მეთოდით თითოეულ რიცხვს დაუმატე მისი ინდექსი,
+filter მეთოდით დატოვე მხოლოდ ლუწი შედეგები,
+reduce მეთოდით იპოვე მათი ნამრავლი.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>Map, Filter, Reduce</title>
+</head>
+<body>
+
+<h3>რიცხვების დამუშავება</h3>
+<div id="output"></div>
+
+<script>
+  // 1) საწყისი მასივი
+  const numbers = [1, 2, 3, 4, 5, 6];
+
+  // 2) map - თითოეულ რიცხვს დავუმატოთ მისი ინდექსი
+  const addedIndex = numbers.map((num, index) => num + index);
+
+  // 3) filter - მხოლოდ ლუწი შედეგები
+  const evenNumbers = addedIndex.filter(num => num % 2 === 0);
+
+  // 4) reduce - ნამრავლის პოვნა
+  const product = evenNumbers.reduce((acc, curr) => acc * curr, 1);
+
+  // შედეგის გამოტანა
+  document.getElementById("output").innerHTML = `
+    <p>საწყისი მასივი: ${numbers}</p>
+    <p>+ ინდექსი: ${addedIndex}</p>
+    <p>ლუწი რიცხვები: ${evenNumbers}</p>
+    <p>ნამრავლი: ${product}</p>
+  `;
+</script>
+
+</body>
+</html>

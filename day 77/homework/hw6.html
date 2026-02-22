@@ -1,0 +1,37 @@
+<!-- 6)შექმენი ფასების მასივი 30, 60, 80, 45, 100. filter მეთოდით დატოვე მხოლოდ 50-ზე მეტი ფასები, map მეთოდით თითოეული ფასს დააკელი 10, reduce მეთოდით იპოვე ჯამი და დაბეჭდე. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>Filter, Map, Reduce</title>
+</head>
+<body>
+
+<h3>ფასების დამუშავება</h3>
+<div id="output"></div>
+
+<script>
+  // 1) საწყისი მასივი
+  const prices = [30, 60, 80, 45, 100];
+
+  // 2) filter - მხოლოდ 50-ზე მეტი ფასები
+  const filtered = prices.filter(price => price > 50);
+
+  // 3) map - თითოეულ ფასს დავაკლოთ 10
+  const discounted = filtered.map(price => price - 10);
+
+  // 4) reduce - ჯამის პოვნა
+  const total = discounted.reduce((acc, curr) => acc + curr, 0);
+
+  // შედეგის გამოტანა
+  document.getElementById("output").innerHTML = `
+    <p>საწყისი ფასები: ${prices}</p>
+    <p>50-ზე მეტი: ${filtered}</p>
+    <p>10-ით შემცირებული: ${discounted}</p>
+    <p>ჯამი: ${total}</p>
+  `;
+</script>
+
+</body>
+</html>

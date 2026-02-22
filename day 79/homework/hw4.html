@@ -1,0 +1,37 @@
+<!-- 4) შექმენი p ელემენტი და ::after-ით დაამატე ბლოკი, რომლის მარცხენა დაშორება იქნება calc(50% - 25px).
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<title>p ::after calc() მაგალითი</title>
+
+<style>
+    p {
+        position: relative;
+        width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #f4f4f4;
+        text-align: center;
+    }
+
+    p::after {
+        content: "";
+        position: absolute;
+        bottom: -30px;
+        left: calc(50% - 25px); /* ცენტრში 50px ბლოკისთვის */
+        width: 50px;
+        height: 50px;
+        background-color: #2ecc71;
+    }
+</style>
+
+</head>
+<body>
+
+<p>ეს არის პარაგრაფის ტექსტი</p>
+
+</body>
+</html>

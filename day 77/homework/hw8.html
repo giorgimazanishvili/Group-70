@@ -1,0 +1,41 @@
+<!-- 8)შექმენი რიცხვების მასივი -5, -10, 8, -3, 2. filter მეთოდით დატოვე მხოლოდ უარყოფითი რიცხვები, map მეთოდით გადაიყვანე დადებით რიცხვებში, sort მეთოდით დაალაგე კლებადობით და reduce მეთოდით იპოვე ჯამი. -->
+ 
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>Filter, Map, Sort, Reduce</title>
+</head>
+<body>
+
+<h3>რიცხვების დამუშავება</h3>
+<div id="output"></div>
+
+<script>
+  // 1) საწყისი მასივი
+  const numbers = [-5, -10, 8, -3, 2];
+
+  // 2) filter - მხოლოდ უარყოფითი რიცხვები
+  const negatives = numbers.filter(num => num < 0);
+
+  // 3) map - გადაყვანა დადებით რიცხვებში
+  const positives = negatives.map(num => Math.abs(num));
+
+  // 4) sort - კლებადობით
+  const sortedDesc = positives.sort((a, b) => b - a);
+
+  // 5) reduce - ჯამის პოვნა
+  const sum = sortedDesc.reduce((acc, curr) => acc + curr, 0);
+
+  // შედეგის გამოტანა
+  document.getElementById("output").innerHTML = `
+    <p>საწყისი მასივი: ${numbers}</p>
+    <p>უარყოფითი რიცხვები: ${negatives}</p>
+    <p>დადებითი (გადაყვანილი): ${positives}</p>
+    <p>კლებადობით დალაგებული: ${sortedDesc}</p>
+    <p>ჯამი: ${sum}</p>
+  `;
+</script>
+
+</body>
+</html>

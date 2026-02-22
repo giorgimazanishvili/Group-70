@@ -1,0 +1,30 @@
+<!-- 3) მოცემულია ფილმების სია, სადაც თითოეულ ფილმს აქვს დასახელება და რეიტინგი. დაწერეთ პროგრამა, რომელიც იპოვის ყველაზე მაღალი რეიტინგის მქონე ფილმს. ამოცანა შეასრულეთ reduce მეთოდის გამოყენებით.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>ყველაზე მაღალი რეიტინგი</title>
+</head>
+<body>
+
+<script>
+    // ფილმების მასივი
+    let movies = [
+        { name: "Inception", rating: 8.8 },
+        { name: "Interstellar", rating: 8.6 },
+        { name: "The Dark Knight", rating: 9.0 },
+        { name: "Tenet", rating: 7.5 }
+    ];
+
+    // reduce მეთოდის გამოყენება ყველაზე მაღალი რეიტინგის ფილმის პოვნისთვის
+    let topMovie = movies.reduce(function(highest, current) {
+        return (current.rating > highest.rating) ? current : highest;
+    }, movies[0]);
+
+    console.log("ყველაზე მაღალი რეიტინგის ფილმი:", topMovie.name, "რეიტინგი:", topMovie.rating);
+</script>
+
+</body>
+</html>

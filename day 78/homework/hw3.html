@@ -1,0 +1,38 @@
+<!-- 3) შექმენი რიცხვების მასივი 1, 3, 5, 7, 9.
+თითოეულ რიცხვს დაუმატე მისი პოზიციის ნომერი მასივში,
+დატოვე მხოლოდ ის შედეგები, რომლებიც კენტია,
+და გამოთვალე მათი ნამრავლი. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>მასივი - ინდექსი და ნამრავლი</title>
+</head>
+<body>
+
+<h2>შედეგი:</h2>
+<p id="result"></p>
+
+<script>
+    // 1. რიცხვების მასივი
+    let numbers = [1, 3, 5, 7, 9];
+
+    // 2. თითოეულ რიცხვს დავუმატოთ მისი ინდექსი
+    let updated = numbers.map((num, index) => num + index);
+
+    // 3. დავტოვოთ მხოლოდ კენტი რიცხვები
+    let oddNumbers = updated.filter(num => num % 2 !== 0);
+
+    // 4. მათი ნამრავლის გამოთვლა
+    let product = oddNumbers.reduce((acc, curr) => acc * curr, 1);
+
+    // შედეგის გამოტანა
+    document.getElementById("result").innerHTML =
+        "ინდექსის დამატების შემდეგ: " + updated + "<br>" +
+        "კენტი რიცხვები: " + oddNumbers + "<br>" +
+        "ნამრავლი: " + product;
+</script>
+
+</body>
+</html>

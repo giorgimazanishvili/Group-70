@@ -1,0 +1,42 @@
+<!-- 1) შექმენი რიცხვების მასივი 3, 6, 9, 12, 15, 18.
+თითოეული რიცხვი გაზარდე ორჯერ,
+დატოვე მხოლოდ ის შედეგები, რომლებიც 20-ზე მეტია,
+იპოვე მათი ჯამი
+და ბოლოს დაბეჭდე რამდენი რიცხვი დარჩა. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>მასივის დავალება</title>
+</head>
+<body>
+
+<h2>შედეგი:</h2>
+<p id="output"></p>
+
+<script>
+    // 1. რიცხვების მასივი
+    let numbers = [3, 6, 9, 12, 15, 18];
+
+    // 2. თითოეული რიცხვის გაორმაგება
+    let doubled = numbers.map(num => num * 2);
+
+    // 3. მხოლოდ 20-ზე მეტი რიცხვების დატოვება
+    let filtered = doubled.filter(num => num > 20);
+
+    // 4. მათი ჯამის პოვნა
+    let sum = filtered.reduce((acc, curr) => acc + curr, 0);
+
+    // 5. რამდენი რიცხვი დარჩა
+    let count = filtered.length;
+
+    // შედეგების გამოტანა
+    document.getElementById("output").innerHTML =
+        "დარჩენილი რიცხვები: " + filtered + "<br>" +
+        "მათი ჯამი: " + sum + "<br>" +
+        "რაოდენობა: " + count;
+</script>
+
+</body>
+</html>

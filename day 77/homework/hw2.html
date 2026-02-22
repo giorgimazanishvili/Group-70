@@ -1,0 +1,37 @@
+<!-- 2)შექმენი რიცხვების მასივი 5, 8, 3, 12, 10, 7. filter მეთოდით დატოვე მხოლოდ ლუწი რიცხვები, map მეთოდით თითოეული გაამრავლე 2-ზე, sort მეთოდით დაალაგე ზრდადობით და forEach მეთოდით დაბეჭდე თითოეული რიცხვი. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>Filter, Map, Sort, forEach</title>
+</head>
+<body>
+
+<h3>მასივის დამუშავება</h3>
+<div id="output"></div>
+
+<script>
+  // 1) მასივი
+  const numbers = [5, 8, 3, 12, 10, 7];
+
+  // 2) filter - მხოლოდ ლუწი რიცხვები
+  const evenNumbers = numbers.filter(num => num % 2 === 0);
+
+  // 3) map - თითოეულის გამრავლება 2-ზე
+  const multiplied = evenNumbers.map(num => num * 2);
+
+  // 4) sort - დალაგება ზრდადობით
+  const sorted = multiplied.sort((a, b) => a - b);
+
+  // 5) forEach - თითოეულის დაბეჭდვა
+  let result = "";
+  sorted.forEach(num => {
+    result += num + "<br>";
+  });
+
+  document.getElementById("output").innerHTML = result;
+</script>
+
+</body>
+</html>

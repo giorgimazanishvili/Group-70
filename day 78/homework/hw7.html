@@ -1,0 +1,43 @@
+<!-- 7) შექმენი რიცხვების მასივი 1, 5, 10, 15, 20.
+თითოეულ რიცხვს გამოაკელი 1,
+დატოვე მხოლოდ ის შედეგები, რომლებიც 10-ზე მეტია,
+დაალაგე მიღებული რიცხვები კლებადობით
+და ეკრანზე გამოიტანე ყველა ელემენტი.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>მასივი - გამოკლება და დალაგება</title>
+</head>
+<body>
+
+<h2>შედეგი:</h2>
+<ul id="result"></ul>
+
+<script>
+    // 1. რიცხვების მასივი
+    let numbers = [1, 5, 10, 15, 20];
+
+    // 2. თითოეულ რიცხვს გამოვაკლოთ 1
+    let decreased = numbers.map(num => num - 1);
+
+    // 3. მხოლოდ 10-ზე მეტი რიცხვები
+    let filtered = decreased.filter(num => num > 10);
+
+    // 4. კლებადობით დალაგება
+    let sorted = filtered.sort((a, b) => b - a);
+
+    // 5. ეკრანზე გამოტანა
+    let ul = document.getElementById("result");
+
+    sorted.forEach(num => {
+        let li = document.createElement("li");
+        li.textContent = num;
+        ul.appendChild(li);
+    });
+</script>
+
+</body>
+</html>

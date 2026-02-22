@@ -1,0 +1,23 @@
+<!-- 4) შექმენი მასივი პროდუქტებით (მაგალითად: პური, რძე, ყველი) და forEach-ით დაბეჭდე თითოეული პროდუქტი ნომრებით (1. პური, 2. რძე და ა.შ.).
+ -->
+
+ <!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>პროდუქტების სია</title>
+</head>
+<body>
+
+<script>
+    // პროდუქტების მასივი
+    let products = ["პური", "რძე", "ყველი"];
+
+    // თითოეული პროდუქტის დაბეჭდვა ნომრებით
+    products.forEach(function(product, index) {
+        console.log((index + 1) + ". " + product);
+    });
+</script>
+
+</body>
+</html>

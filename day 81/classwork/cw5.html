@@ -1,0 +1,33 @@
+<!-- 5) მოცემულია ტექსტი. დაწერეთ პროგრამა, რომელიც დაითვლის რამდენჯერ გვხვდება თითოეული სიმბოლო ტექსტში (გაითვალისწინეთ მხოლოდ ასოები და რიცხვები, გამოტოვეთ პუნქტუაცია და სფეისები). ამოცანა შეასრულეთ reduce მეთოდის გამოყენებით.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>სიმბოლოების თვლა</title>
+</head>
+<body>
+
+<script>
+    // ტექსტი
+    let text = "Hello, World! 123... This is a test text.";
+
+    // reduce გამოყენებით სიმბოლოების დათვლა (პუნქტუაცია და სივრცეები გამოტოვებულია)
+    let charCount = text.split('')  // ვყევართ ტექსტს სიმბოლოებად
+        .filter(char => /[a-zA-Z0-9]/.test(char))  // ვフィილტრებთ მხოლოდ ასოებსა და რიცხვებს
+        .reduce(function(accumulator, char) {
+            char = char.toLowerCase();  // ჩვეულებრივი ფონტისგან ერთიანობა
+            if (accumulator[char]) {
+                accumulator[char]++;
+            } else {
+                accumulator[char] = 1;
+            }
+            return accumulator;
+        }, {});
+
+    console.log(charCount);
+</script>
+
+</body>
+</html> 

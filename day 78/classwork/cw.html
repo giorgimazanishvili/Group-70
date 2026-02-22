@@ -1,0 +1,45 @@
+<!-- 1) შექმენი რიცხვების მასივი 4, 9, 2, 15, 6, 11.
+map მეთოდით თითოეული რიცხვი აიყვანე კვადრატში,
+filter მეთოდით დატოვე მხოლოდ 50-ზე ნაკლები მნიშვნელობები,
+reduce მეთოდით იპოვე მათი ჯამი
+და ბოლოს დაბეჭდე მაქსიმალური რიცხვი მიღებული მასივიდან. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>Map, Filter, Reduce</title>
+</head>
+<body>
+
+<h3>რიცხვების დამუშავება</h3>
+<div id="output"></div>
+
+<script>
+  // 1) საწყისი მასივი
+  const numbers = [4, 9, 2, 15, 6, 11];
+
+  // 2) map - კვადრატში აყვანა
+  const squared = numbers.map(num => num ** 2);
+
+  // 3) filter - მხოლოდ 50-ზე ნაკლები მნიშვნელობები
+  const filtered = squared.filter(num => num < 50);
+
+  // 4) reduce - ჯამის პოვნა
+  const sum = filtered.reduce((acc, curr) => acc + curr, 0);
+
+  // 5) მაქსიმალური რიცხვი მიღებული მასივიდან
+  const max = Math.max(...filtered);
+
+  // შედეგის გამოტანა
+  document.getElementById("output").innerHTML = `
+    <p>საწყისი მასივი: ${numbers}</p>
+    <p>კვადრატში: ${squared}</p>
+    <p>50-ზე ნაკლები: ${filtered}</p>
+    <p>ჯამი: ${sum}</p>
+    <p>მაქსიმალური: ${max}</p>
+  `;
+</script>
+
+</body>
+</html>

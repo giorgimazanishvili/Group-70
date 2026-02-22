@@ -1,0 +1,39 @@
+<!-- 1)შექმენი რიცხვების მასივი 5, 7, 10, 8, 12, 4. map მეთოდით თითოეული რიცხვი გაამრავლე 3-ზე, filter მეთოდით დატოვე მხოლოდ 20-ზე მეტი რიცხვები, reduce მეთოდით იპოვე მათი ჯამი და ბოლოს დაბეჭდე რამდენი რიცხვი დარჩა.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>Map, Filter, Reduce Example</title>
+</head>
+<body>
+
+  <h2>მასივის დამუშავება</h2>
+  <div id="output"></div>
+
+  <script>
+    // საწყისი მასივი
+    const numbers = [5, 7, 10, 8, 12, 4];
+
+    // map - თითოეული რიცხვის გამრავლება 3-ზე
+    const multiplied = numbers.map(num => num * 3);
+
+    // filter - მხოლოდ 20-ზე მეტი რიცხვები
+    const filtered = multiplied.filter(num => num > 20);
+
+    // reduce - ჯამის გამოთვლა
+    const sum = filtered.reduce((acc, curr) => acc + curr, 0);
+
+    // შედეგის გამოტანა გვერდზე
+    document.getElementById("output").innerHTML = `
+      <p><strong>საწყისი მასივი:</strong> ${numbers}</p>
+      <p><strong>გამრავლებული (map):</strong> ${multiplied}</p>
+      <p><strong>გაფილტრული (filter > 20):</strong> ${filtered}</p>
+      <p><strong>ჯამი (reduce):</strong> ${sum}</p>
+      <p><strong>დარჩენილი რაოდენობა:</strong> ${filtered.length}</p>
+    `;
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!-- 5) შექმენი რიცხვების მასივი 6, 9, 12, 15, 18.
+map მეთოდით თითოეული რიცხვი გაამრავლე 4-ზე,
+reduce მეთოდით იპოვე საშუალო არითმეტიკული,
+Math.round()-ის გამოყენებით დაამრგვალე შედეგი
+და დაბეჭდე საბოლოო პასუხი. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Map და Reduce მაგალითი</title>
+</head>
+<body>
+
+    <h2>საბოლოო პასუხი:</h2>
+    <p id="result"></p>
+
+    <script>
+        // 1. რიცხვების მასივი
+        let numbers = [6, 9, 12, 15, 18];
+
+        // 2. map მეთოდით თითოეული რიცხვის გამრავლება 4-ზე
+        let multiplied = numbers.map(num => num * 4);
+
+        // 3. reduce მეთოდით ჯამის პოვნა
+        let sum = multiplied.reduce((acc, curr) => acc + curr, 0);
+
+        // 4. საშუალო არითმეტიკულის გამოთვლა
+        let average = sum / multiplied.length;
+
+        // 5. Math.round()-ით დამრგვალება
+        let finalResult = Math.round(average);
+
+        // 6. შედეგის გამოტანა HTML-ში
+        document.getElementById("result").textContent = finalResult;
+    </script>
+
+</body>
+</html>

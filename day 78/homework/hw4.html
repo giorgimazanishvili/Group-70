@@ -1,0 +1,42 @@
+<!-- 4) შექმენი რიცხვების მასივი -8, -2, 0, 3, 6, 9, 11.
+ამოიღე ყველა უარყოფითი რიცხვი,
+დარჩენილი რიცხვებიდან თითოეულს დაუმატე 5,
+დატოვე მხოლოდ 10-ზე ნაკლები შედეგები
+და დაბეჭდე ისინი. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>მასივი - ფილტრაცია და დამატება</title>
+</head>
+<body>
+
+<h2>შედეგი:</h2>
+<ul id="result"></ul>
+
+<script>
+    // 1. რიცხვების მასივი
+    let numbers = [-8, -2, 0, 3, 6, 9, 11];
+
+    // 2. უარყოფითი რიცხვების ამოღება
+    let positiveNumbers = numbers.filter(num => num >= 0);
+
+    // 3. თითოეულს დავუმატოთ 5
+    let addedFive = positiveNumbers.map(num => num + 5);
+
+    // 4. დავტოვოთ მხოლოდ 10-ზე ნაკლები რიცხვები
+    let lessThanTen = addedFive.filter(num => num < 10);
+
+    // 5. დაბეჭდვა ეკრანზე
+    let ul = document.getElementById("result");
+
+    lessThanTen.forEach(num => {
+        let li = document.createElement("li");
+        li.textContent = num;
+        ul.appendChild(li);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- 4) მოცემულია სპორტსმენების სია, სადაც თითოეულს აქვს დაგროვილი ქულები. დაწერეთ პროგრამა, რომელიც დაადგენს რამდენ სპორტსმენს აქვს 100 ან მეტი ქულა, რამდენს ნაკლები, ასევე გამოითვლის ყველა სპორტსმენის ქულების ჯამსა და საშუალოს. ამოცანა შეასრულეთ reduce მეთოდის გამოყენებით. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<title>სპორტსმენების ქულები</title>
+</head>
+<body>
+
+<script>
+    // სპორტსმენების მასივი
+    let athletes = [
+        { name: "ანნა", score: 120 },
+        { name: "გიორგი", score: 95 },
+        { name: "ნინო", score: 110 },
+        { name: "ლუკა", score: 80 },
+        { name: "მარიამი", score: 100 }
+    ];
+
+    // reduce გამოყენებით სტატისტიკის გამოთვლა
+    let stats = athletes.reduce(function(accumulator, athlete) {
+        if (athlete.score >= 100) {
+            accumulator.aboveOrEqual100++;
+        } else {
+            accumulator.below100++;
+        }
+
+        accumulator.total += athlete.score;
+        return accumulator;
+    }, { aboveOrEqual100: 0, below100: 0, total: 0 });
+
+    // საშუალოს გამოთვლა
+    stats.average = stats.total / athletes.length;
+
+    console.log("100 ან მეტი ქულა:", stats.aboveOrEqual100);
+    console.log("100-ზე ნაკლები ქულა:", stats.below100);
+    console.log("ჯამი:", stats.total);
+    console.log("საშუალო:", stats.average.toFixed(2));
+</script>
+
+</body>
+</html>

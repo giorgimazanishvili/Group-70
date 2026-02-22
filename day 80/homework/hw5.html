@@ -1,0 +1,25 @@
+<!-- 5) შექმენი რიცხვების მასივი და გამოიყენე reduce, რომ დაითვალო ყველა რიცხვის ჯამი.
+ -->
+
+ <!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>reduce - ჯამის გამოთვლა</title>
+</head>
+<body>
+
+<script>
+    // რიცხვების მასივი
+    let numbers = [5, 10, 15, 20];
+
+    // ყველა რიცხვის ჯამის გამოთვლა
+    let sum = numbers.reduce(function(accumulator, currentValue) {
+        return accumulator + currentValue;
+    }, 0);
+
+    console.log("რიცხვების ჯამი არის: " + sum);
+</script>
+
+</body>
+</html>

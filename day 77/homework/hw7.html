@@ -1,0 +1,43 @@
+<!-- 
+7)შექმენი რიცხვების მასივი 5, 8, 10, 12, 7. map მეთოდით თითოეული რიცხვი გაამრავლე 4-ზე, filter მეთოდით დატოვე მხოლოდ 30-ზე მეტი რიცხვები, filter მეთოდით დატოვე მხოლოდ ლუწი რიცხვები და reduce მეთოდით იპოვე ჯამი.
+ -->
+
+ <!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>Map, Filter, Reduce</title>
+</head>
+<body>
+
+<h3>რიცხვების დამუშავება</h3>
+<div id="output"></div>
+
+<script>
+  // 1) საწყისი მასივი
+  const numbers = [5, 8, 10, 12, 7];
+
+  // 2) map - თითოეულის გამრავლება 4-ზე
+  const multiplied = numbers.map(num => num * 4);
+
+  // 3) filter - მხოლოდ 30-ზე მეტი რიცხვები
+  const over30 = multiplied.filter(num => num > 30);
+
+  // 4) filter - მხოლოდ ლუწი რიცხვები
+  const evenNumbers = over30.filter(num => num % 2 === 0);
+
+  // 5) reduce - ჯამის პოვნა
+  const sum = evenNumbers.reduce((acc, curr) => acc + curr, 0);
+
+  // შედეგის გამოტანა
+  document.getElementById("output").innerHTML = `
+    <p>საწყისი მასივი: ${numbers}</p>
+    <p>×4: ${multiplied}</p>
+    <p>30-ზე მეტი: ${over30}</p>
+    <p>ლუწი რიცხვები: ${evenNumbers}</p>
+    <p>ჯამი: ${sum}</p>
+  `;
+</script>
+
+</body>
+</html>

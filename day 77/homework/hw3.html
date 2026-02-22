@@ -1,0 +1,41 @@
+<!-- 3)შექმენი რიცხვების მასივი 3, 4, 5, 7, 8. map მეთოდით თითოეულ რიცხვს დაუმატე 1, map მეთოდით მეორე ნაბიჯში გაამრავლე 2-ზე, filter მეთოდით დატოვე მხოლოდ 10-ზე მეტი რიცხვები და reduce მეთოდით იპოვე ნამრავლი. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>Map, Filter, Reduce</title>
+</head>
+<body>
+
+<h3>მასივის დამუშავება</h3>
+<div id="output"></div>
+
+<script>
+  // 1) საწყისი მასივი
+  const numbers = [3, 4, 5, 7, 8];
+
+  // 2) map - თითოეულ რიცხვს დავუმატოთ 1
+  const plusOne = numbers.map(num => num + 1);
+
+  // 3) map - გავამრავლოთ 2-ზე
+  const multiplied = plusOne.map(num => num * 2);
+
+  // 4) filter - მხოლოდ 10-ზე მეტი რიცხვები
+  const filtered = multiplied.filter(num => num > 10);
+
+  // 5) reduce - ნამრავლის პოვნა
+  const product = filtered.reduce((acc, curr) => acc * curr, 1);
+
+  // შედეგის გამოტანა
+  document.getElementById("output").innerHTML = `
+    <p>საწყისი მასივი: ${numbers}</p>
+    <p>+1: ${plusOne}</p>
+    <p>×2: ${multiplied}</p>
+    <p>10-ზე მეტი: ${filtered}</p>
+    <p>ნამრავლი: ${product}</p>
+  `;
+</script>
+
+</body>
+</html>

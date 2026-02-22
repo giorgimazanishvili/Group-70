@@ -1,0 +1,41 @@
+<!-- 2) შექმენი რიცხვების მასივი 10, 3, 18, 7, 14, 1.
+filter მეთოდით დატოვე მხოლოდ 5-ზე მეტი რიცხვები,
+map მეთოდით თითოეული გაყავი 2-ზე,
+sort მეთოდით დაალაგე კლებადობით
+და forEach მეთოდით დაბეჭდე თითოეული ელემენტი. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>Filter, Map, Sort, forEach</title>
+</head>
+<body>
+
+<h3>რიცხვების დამუშავება</h3>
+<div id="output"></div>
+
+<script>
+  // 1) საწყისი მასივი
+  const numbers = [10, 3, 18, 7, 14, 1];
+
+  // 2) filter - მხოლოდ 5-ზე მეტი რიცხვები
+  const filtered = numbers.filter(num => num > 5);
+
+  // 3) map - თითოეული 2-ზე გავყოთ
+  const divided = filtered.map(num => num / 2);
+
+  // 4) sort - კლებადობით
+  const sortedDesc = divided.sort((a, b) => b - a);
+
+  // 5) forEach - თითოეულის დაბეჭდვა
+  let result = "";
+  sortedDesc.forEach(num => {
+    result += num + "<br>";
+  });
+
+  document.getElementById("output").innerHTML = result;
+</script>
+
+</body>
+</html>

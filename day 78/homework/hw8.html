@@ -1,0 +1,37 @@
+<!-- 8) შექმენი რიცხვების მასივი 3, 5, 7, 9, 11.
+თითოეული რიცხვი გაამრავლე საკუთარ თავზე,
+დატოვე მხოლოდ ის შედეგები, რომლებიც ლუწია,
+გამოთვალე რამდენი ასეთი რიცხვი მიიღება
+და დაბეჭდე ეს რაოდენობა. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>მასივი - კვადრატი და ლუწები</title>
+</head>
+<body>
+
+<h2>შედეგი:</h2>
+<p id="result"></p>
+
+<script>
+    // 1. რიცხვების მასივი
+    let numbers = [3, 5, 7, 9, 11];
+
+    // 2. თითოეული რიცხვის საკუთარ თავზე გამრავლება (კვადრატი)
+    let squared = numbers.map(num => num * num);
+
+    // 3. მხოლოდ ლუწი რიცხვები
+    let evenNumbers = squared.filter(num => num % 2 === 0);
+
+    // 4. მათი რაოდენობა
+    let count = evenNumbers.length;
+
+    // 5. შედეგის გამოტანა
+    document.getElementById("result").textContent =
+        "ლუწი შედეგების რაოდენობა: " + count;
+</script>
+
+</body>
+</html>
