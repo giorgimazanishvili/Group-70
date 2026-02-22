@@ -1,0 +1,51 @@
+<!-- 
+7) მოცემულია რიცხვების მასივი. დაწერეთ პროგრამა, რომელიც დაითვლის რამდენი რიცხვია 0-დან 50-მდე, რამდენი 51-დან 100-მდე და რამდენი 100-ზე მეტია. ამოცანა შეასრულეთ forEach მეთოდის გამოყენებით.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>რიცხვების კატეგორიები</title>
+</head>
+<body>
+
+<h2>რიცხვების დაჯგუფება</h2>
+<ul id="result"></ul>
+
+<script>
+    // რიცხვების მასივი
+    const numbers = [10, 25, 50, 60, 75, 90, 101, 120, 5, 49, 200];
+
+    // კატეგორიების ობიექტი
+    const categories = {
+        "0-დან 50-მდე": 0,
+        "51-დან 100-მდე": 0,
+        "100-ზე მეტი": 0
+    };
+
+    // forEach მეთოდით დათვლა
+    numbers.forEach(num => {
+        if (num >= 0 && num <= 50) {
+            categories["0-დან 50-მდე"]++;
+        } else if (num >= 51 && num <= 100) {
+            categories["51-დან 100-მდე"]++;
+        } else if (num > 100) {
+            categories["100-ზე მეტი"]++;
+        }
+    });
+
+    // შედეგის გამოტანა HTML-ში
+    const resultList = document.getElementById("result");
+
+    for (let key in categories) {
+        const li = document.createElement("li");
+        li.textContent = `${key}: ${categories[key]} რიცხვი`;
+        resultList.appendChild(li);
+    }
+
+    console.log(categories);
+</script>
+
+</body>
+</html>

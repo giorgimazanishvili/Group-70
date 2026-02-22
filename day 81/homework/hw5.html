@@ -1,0 +1,38 @@
+<!-- 5) მოცემულია ტექსტი. დაწერეთ პროგრამა, რომელიც დაითვლის რამდენი სიტყვა იწყება ხმოვანი ასოთი (a, e, i, o, u — ინგლისურად ან ა, ე, ი, ო, უ — ქართულად). ამოცანა შეასრულეთ reduce მეთოდის გამოყენებით. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>ხმოვანით დაწყებული სიტყვები</title>
+</head>
+<body>
+
+<h2>სიტყვების ანალიზი</h2>
+<p id="result"></p>
+
+<script>
+    // მოცემული ტექსტი
+    const text = "Apple არის კარგი ხილი და orange ასევე იდეალურია. ანა და ელენე უნივერსიტეტში სწავლობენ.";
+
+    // ხმოვანი ასოები
+    const vowels = ["a", "e", "i", "o", "u", "ა", "ე", "ი", "ო", "უ"];
+
+    // ტექსტის სიტყვებად დაყოფა
+    const words = text.split(/\s+/);
+
+    // reduce მეთოდით დათვლა
+    const vowelWordCount = words.reduce((count, word) => {
+        const firstLetter = word[0]?.toLowerCase();
+        return vowels.includes(firstLetter) ? count + 1 : count;
+    }, 0);
+
+    // შედეგის გამოტანა
+    document.getElementById("result").textContent =
+        `ხმოვანით დაწყებული სიტყვების რაოდენობა: ${vowelWordCount}`;
+
+    console.log("რაოდენობა:", vowelWordCount);
+</script>
+
+</body>
+</html>

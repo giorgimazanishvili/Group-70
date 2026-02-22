@@ -1,0 +1,59 @@
+<!-- 4) მოცემულია თანამშრომლების სია სამუშაო საათებით. დაწერეთ პროგრამა, რომელიც დაადგენს რამდენმა თანამშრომელმა იმუშავა 40 ან მეტი საათი, რამდენმა ნაკლები, ასევე გამოითვლის ყველა თანამშრომლის ნამუშევარი საათების ჯამსა და საშუალოს. ამოცანა შეასრულეთ reduce მეთოდის გამოყენებით.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>თანამშრომლების სამუშაო საათები</title>
+</head>
+<body>
+
+<h2>თანამშრომლების სტატისტიკა</h2>
+<ul id="result"></ul>
+
+<script>
+    // თანამშრომლების სია
+    const employees = [
+        { name: "გიორგი", hours: 42 },
+        { name: "ანა", hours: 38 },
+        { name: "ლუკა", hours: 45 },
+        { name: "ნინო", hours: 30 },
+        { name: "დავითი", hours: 40 }
+    ];
+
+    // reduce მეთოდით გამოთვლა
+    const stats = employees.reduce((acc, employee) => {
+        acc.totalHours += employee.hours;
+
+        if (employee.hours >= 40) {
+            acc.fullTime++;
+        } else {
+            acc.partTime++;
+        }
+
+        return acc;
+    }, {
+        totalHours: 0,
+        fullTime: 0,
+        partTime: 0
+    });
+
+    // საშუალოს გამოთვლა
+    const averageHours = stats.totalHours / employees.length;
+
+    // შედეგის გამოტანა
+    const result = document.getElementById("result");
+
+    result.innerHTML = `
+        <li>40 ან მეტი საათი იმუშავა: ${stats.fullTime} თანამშრომელმა</li>
+        <li>40-ზე ნაკლები იმუშავა: ${stats.partTime} თანამშრომელმა</li>
+        <li>სულ ნამუშევარი საათები: ${stats.totalHours}</li>
+        <li>საშუალო საათები: ${averageHours.toFixed(2)}</li>
+    `;
+
+    console.log(stats);
+</script>
+
+</body>
+</html>

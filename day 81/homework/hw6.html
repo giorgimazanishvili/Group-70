@@ -1,0 +1,46 @@
+<!-- 6) მოცემულია საწყობში არსებული პროდუქციის სია, სადაც თითოეულ პროდუქტს აქვს ფასი და საწყობში არსებული რაოდენობა. დაწერეთ პროგრამა, რომელიც თითოეული პროდუქტის საერთო ღირებულებას გამოთვლის და შემდეგ დაადგენს საწყობის სრული მარაგის ფასს. ამოცანა შეასრულეთ forEach და reduce მეთოდების გამოყენებით. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>საწყობის მარაგი</title>
+</head>
+<body>
+
+<h2>საწყობის პროდუქციის ღირებულება</h2>
+<ul id="productList"></ul>
+<h3 id="totalValue"></h3>
+
+<script>
+    // პროდუქციის სია
+    const products = [
+        { name: "ლეპტოპი", price: 2500, quantity: 5 },
+        { name: "ტელეფონი", price: 1200, quantity: 8 },
+        { name: "ყურსასმენი", price: 150, quantity: 20 }
+    ];
+
+    const productList = document.getElementById("productList");
+
+    // თითოეული პროდუქტის საერთო ღირებულების გამოთვლა (forEach)
+    products.forEach(product => {
+        product.total = product.price * product.quantity;
+
+        const li = document.createElement("li");
+        li.textContent = `${product.name} - ${product.quantity} ცალი - საერთო ღირებულება: ${product.total} ლარი`;
+        productList.appendChild(li);
+    });
+
+    // საწყობის სრული ღირებულების დათვლა (reduce)
+    const warehouseTotal = products.reduce((sum, product) => {
+        return sum + product.total;
+    }, 0);
+
+    document.getElementById("totalValue").textContent =
+        `საწყობის სრული მარაგის ღირებულება: ${warehouseTotal} ლარი`;
+
+    console.log("სრული ღირებულება:", warehouseTotal);
+</script>
+
+</body>
+</html>

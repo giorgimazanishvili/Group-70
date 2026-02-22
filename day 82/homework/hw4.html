@@ -1,0 +1,45 @@
+<!-- 4) გააკეთე ბარათი, რომელიც hover-ზე გადაიხრება 3D ეფექტით (rotateX ან rotateY).
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>3D Hover Card</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            perspective: 1000px; /* 3D ეფექტისთვის აუცილებელია */
+        }
+
+        .card {
+            width: 250px;
+            height: 150px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            transform-style: preserve-3d; /* 3D-თვის აუცილებელია */
+        }
+
+        .card:hover {
+            transform: rotateY(10deg) rotateX(5deg); /* 3D დახრა hover-ზე */
+            box-shadow: 0 12px 25px rgba(0,0,0,0.3); /* ჩრდილის გაძლიერება */
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h3>3D Hover ბარათი</h3>
+</div>
+
+</body>
+</html>

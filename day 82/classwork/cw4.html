@@ -1,0 +1,29 @@
+<!-- 4) გააკეთე წრე, რომელიც hover-ზე ოდნავ გაიზრდება ზომაში (transform: scale() გამოიყენე).
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Hover Circle Scale</title>
+    <style>
+        #circle {
+            width: 100px;
+            height: 100px;
+            background-color: teal;
+            border-radius: 50%; /* წრის ფორმა */
+            transition: transform 0.3s ease; /* ნელი ზრდა */
+            margin: 50px;
+        }
+
+        #circle:hover {
+            transform: scale(1.2); /* ოდნავ გაზრდა */
+        }
+    </style>
+</head>
+<body>
+
+<div id="circle"></div>
+
+</body>
+</html>

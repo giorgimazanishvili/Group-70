@@ -1,0 +1,40 @@
+<!-- 6) შექმენი ტექსტების სია, სადაც მხოლოდ აქტიურ ელემენტზე მისვლისას გამოჩნდება pointer კურსორი.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>აქტიური ელემენტის კურსორი</title>
+    <style>
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        /* მხოლოდ აქტიურ ელემენტზე pointer კურსორი */
+        li.active:hover {
+            cursor: pointer;
+            background-color: #d0e6ff; /* ცოტა ვიზუალური ეფექტისთვის */
+        }
+    </style>
+</head>
+<body>
+
+<h2>ტექსტების სია</h2>
+<ul>
+    <li class="active">აქტიური ელემენტი 1</li>
+    <li>არაკტიური ელემენტი 2</li>
+    <li class="active">აქტიური ელემენტი 3</li>
+    <li>არაკტიური ელემენტი 4</li>
+</ul>
+
+</body>
+</html>

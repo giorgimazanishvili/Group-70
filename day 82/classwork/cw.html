@@ -1,0 +1,32 @@
+<!-- 1) შექმენი დივ ელემენტი, რომელიც გვერდის ჩატვირთვისას ნელა შეიცვლის ფერს ერთი ფერიდან მეორეზე. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>ფერის ნელ-ნელა შეცვლა</title>
+    <style>
+        /* სტილი დივისთვის */
+        #colorBox {
+            width: 200px;
+            height: 200px;
+            background-color: red; /* საწყისი ფერი */
+            margin: 50px auto;
+            transition: background-color 3s ease; /* ნელი ცვლილება */
+        }
+    </style>
+</head>
+<body>
+
+<div id="colorBox"></div>
+
+<script>
+    window.addEventListener("load", () => {
+        const box = document.getElementById("colorBox");
+        // ფერის შეცვლა გვერდის ჩატვირთვისთანავე
+        box.style.backgroundColor = "blue"; // ახალი ფერი
+    });
+</script>
+
+</body>
+</html>

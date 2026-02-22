@@ -1,0 +1,48 @@
+<!-- 6) გააკეთე სურათების გალერეა, სადაც hover-ზე მხოლოდ არჩეული სურათი გაიზრდება, დანარჩენები კი ოდნავ შემცირდება.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Hover Gallery</title>
+    <style>
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 50px;
+        }
+
+        .gallery img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* როცა ერთ სურათზე hover ხდება */
+        .gallery:hover img {
+            transform: scale(0.9); /* დანარჩენი ოდნავ მცირდება */
+            filter: brightness(80%); /* სურათები ოდნავ მუქდება */
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1); /* არჩეული სურათი იზრდება */
+            filter: brightness(100%); /* ელემენტი სრულად მკაფიო */
+        }
+    </style>
+</head>
+<body>
+
+<div class="gallery">
+    <img src="https://via.placeholder.com/150x100/ff6b6b" alt="სურათი 1">
+    <img src="https://via.placeholder.com/150x100/3498db" alt="სურათი 2">
+    <img src="https://via.placeholder.com/150x100/2ecc71" alt="სურათი 3">
+    <img src="https://via.placeholder.com/150x100/f1c40f" alt="სურათი 4">
+</div>
+
+</body>
+</html>

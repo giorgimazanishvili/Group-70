@@ -1,0 +1,29 @@
+<!-- 3) შექმენი კვადრატი, რომელიც hover-ზე 20px-ით მარჯვნივ გადაიწევს (transform: translateX() გამოიყენე).
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>Hover TranslateX</title>
+    <style>
+        #square {
+            width: 100px;
+            height: 100px;
+            background-color: crimson;
+            transition: transform 0.3s ease; /* ნელი მოძრაობა */
+            margin: 50px;
+        }
+
+        #square:hover {
+            transform: translateX(20px); /* 20px მარჯვნივ გადატანა */
+        }
+    </style>
+</head>
+<body>
+
+<div id="square"></div>
+
+</body>
+</html>

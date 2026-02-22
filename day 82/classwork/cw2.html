@@ -1,0 +1,27 @@
+<!-- 2) გააკეთე ტექსტი, რომელიც მაუსის მიყვანისას (hover) ოდნავ გაიზრდება ზომაში.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Hover Text Effect</title>
+    <style>
+        .hoverText {
+            font-size: 20px;
+            transition: transform 0.3s ease; /* ნელი ზრდა */
+            display: inline-block; /* აუცილებელია transform-ისთვის */
+            cursor: pointer;
+        }
+
+        .hoverText:hover {
+            transform: scale(1.2); /* ოდნავ ზრდა */
+        }
+    </style>
+</head>
+<body>
+
+<p class="hoverText">მაუსი გადაჰყევით ამ ტექსტზე</p>
+
+</body>
+</html>

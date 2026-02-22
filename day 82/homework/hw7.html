@@ -1,0 +1,48 @@
+<!-- 7) შექმენი ღილაკი, რომელსაც hover-ზე გამოუჩნდება ქვედა ხაზის ანიმაცია (ხაზი transform-ით გაიზარდოს).
+ -->
+
+ <!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Button Underline Animation</title>
+    <style>
+        .btn {
+            position: relative;
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        /* ქვედა ხაზის შექმნა */
+        .btn::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #fff;
+            transform: scaleX(0); /* საწყისი მდგომარეობა */
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        /* hover-ზე ხაზის გაფართოება */
+        .btn:hover::after {
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+<body>
+
+<button class="btn">Hover Me</button>
+
+</body>
+</html>

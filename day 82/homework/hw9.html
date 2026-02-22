@@ -1,0 +1,29 @@
+<!-- 9) შექმენი ელემენტი, რომელიც hover-ზე დიაგონალურად გადაიწევს (translateX და translateY ერთად გამოიყენე).
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Diagonal Hover Effect</title>
+    <style>
+        .diagonal-box {
+            width: 150px;
+            height: 150px;
+            background-color: #ff6b6b;
+            border-radius: 10px;
+            transition: transform 0.4s ease; /* ნელი მოძრაობა */
+            margin: 50px auto;
+        }
+
+        .diagonal-box:hover {
+            transform: translateX(30px) translateY(30px); /* დიაგონალური გადაადგილება */
+        }
+    </style>
+</head>
+<body>
+
+<div class="diagonal-box"></div>
+
+</body>
+</html>

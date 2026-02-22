@@ -1,0 +1,38 @@
+<!-- 3) მოცემულია თამაშის მოთამაშეების სია, სადაც თითოეულ მოთამაშეს აქვს სახელი და მოგებული ქულები. დაწერეთ პროგრამა, რომელიც იპოვის მოთამაშეს, რომელსაც ყველაზე ნაკლები ქულა აქვს. ამოცანა შეასრულეთ reduce მეთოდის გამოყენებით.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>მოთამაშეების ქულები</title>
+</head>
+<body>
+
+<h2>ყველაზე ნაკლები ქულის მქონე მოთამაშე</h2>
+<p id="result"></p>
+
+<script>
+    // მოთამაშეების სია
+    const players = [
+        { name: "გიორგი", score: 120 },
+        { name: "ანა", score: 95 },
+        { name: "ლუკა", score: 140 },
+        { name: "ნინო", score: 80 },
+        { name: "დავითი", score: 110 }
+    ];
+
+    // reduce მეთოდით მინიმალური ქულის პოვნა
+    const lowestPlayer = players.reduce((min, current) => {
+        return current.score < min.score ? current : min;
+    });
+
+    // შედეგის გამოტანა
+    document.getElementById("result").textContent =
+        `ყველაზე ნაკლები ქულა აქვს ${lowestPlayer.name}-ს (${lowestPlayer.score} ქულა)`;
+
+    console.log(lowestPlayer);
+</script>
+
+</body>
+</html>

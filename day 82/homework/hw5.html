@@ -1,0 +1,35 @@
+<!-- 5) შექმენი ელემენტი, რომელიც hover-ზე ოდნავ შემცირდება და შემდეგ ნელა დაბრუნდება საწყის ზომაზე.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Hover Shrink Effect</title>
+    <style>
+        .shrink-box {
+            width: 150px;
+            height: 150px;
+            background-color: #ff6b6b;
+            border-radius: 12px;
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+            transition: transform 0.3s ease; /* ნელი მოძრაობა */
+            cursor: pointer;
+        }
+
+        .shrink-box:hover {
+            transform: scale(0.9); /* ოდნავ შემცირება */
+        }
+    </style>
+</head>
+<body>
+
+<div class="shrink-box">Hover Me</div>
+
+</body>
+</html>

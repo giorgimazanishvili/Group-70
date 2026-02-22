@@ -1,0 +1,43 @@
+<!-- 1) მოცემულია წიგნების ავტორების მასივი. დაწერეთ პროგრამა, რომელიც დააჯგუფებს ავტორებს და დაითვლის რამდენი წიგნი აქვს თითოეულ ავტორს. შედეგი შეინახეთ ობიექტში. ამოცანა შეასრულეთ reduce მეთოდის გამოყენებით. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>ავტორების დაჯგუფება</title>
+</head>
+<body>
+
+<h2>ავტორების სტატისტიკა</h2>
+<pre id="result"></pre>
+
+<script>
+    // წიგნების ავტორების მასივი
+    const authors = [
+        "შოთა რუსთაველი",
+        "ილია ჭავჭავაძე",
+        "შოთა რუსთაველი",
+        "აკაკი წერეთელი",
+        "ილია ჭავჭავაძე",
+        "ილია ჭავჭავაძე"
+    ];
+
+    // reduce მეთოდით დაჯგუფება და დათვლა
+    const authorCount = authors.reduce((accumulator, author) => {
+        if (accumulator[author]) {
+            accumulator[author] += 1;
+        } else {
+            accumulator[author] = 1;
+        }
+        return accumulator;
+    }, {});
+
+    // შედეგის გამოტანა
+    document.getElementById("result").textContent =
+        JSON.stringify(authorCount, null, 2);
+
+    console.log(authorCount);
+</script>
+
+</body>
+</html>

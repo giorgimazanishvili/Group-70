@@ -1,0 +1,51 @@
+<!-- 2) მოცემულია ონლაინ მაღაზიაში მომხმარებლების მიერ დახარჯული თანხების მასივი. დაწერეთ პროგრამა, რომელიც დაადგენს რამდენი მომხმარებელი ეკუთვნის შემდეგ კატეგორიებს:
+მცირე ხარჯვა — 100-ზე ნაკლები
+საშუალო ხარჯვა — 100-დან 499-ის ჩათვლით
+დიდი ხარჯვა — 500 და მეტი
+ამოცანა შეასრულეთ forEach მეთოდის გამოყენებით. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>მომხმარებლების ხარჯვის ანალიზი</title>
+</head>
+<body>
+
+<h2>ონლაინ მაღაზიის მომხმარებლების კატეგორიები</h2>
+<ul id="result"></ul>
+
+<script>
+    // მომხმარებლების მიერ დახარჯული თანხები
+    const expenses = [45, 150, 520, 80, 300, 499, 1000, 60, 110];
+
+    // კატეგორიების ობიექტი
+    const categories = {
+        მცირე: 0,
+        საშუალო: 0,
+        დიდი: 0
+    };
+
+    // forEach მეთოდით კატეგორიებად დაყოფა
+    expenses.forEach(amount => {
+        if (amount < 100) {
+            categories.მცირე++;
+        } else if (amount >= 100 && amount <= 499) {
+            categories.საშუალო++;
+        } else {
+            categories.დიდი++;
+        }
+    });
+
+    // შედეგის გამოტანა HTML-ში
+    const resultList = document.getElementById("result");
+
+    for (let key in categories) {
+        const li = document.createElement("li");
+        li.textContent = `${key} ხარჯვა: ${categories[key]} მომხმარებელი`;
+        resultList.appendChild(li);
+    }
+</script>
+
+</body>
+</html>
