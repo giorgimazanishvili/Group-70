@@ -1,0 +1,51 @@
+<!-- 1) შექმენი 6 ბარათის (card) სექცია. მობილურზე იყოს 1 სვეტი, ტაბლეტზე 2 სვეტი, ხოლო desktop-ზე 3 სვეტი. გამოიყენე grid, grid-cols-1, md:grid-cols-2, lg:grid-cols-3. ბარათებს დაუმატე shadow, rounded-xl, p-4. დამატებით გააკეთე ისე, რომ xl ზომაზე 4 სვეტი გახდეს.
+ -->
+
+ <!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Cards Grid</title>
+</head>
+<body class="bg-gray-100 p-6">
+
+  <section class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      
+      <div class="bg-white shadow rounded-xl p-4">
+        <h3 class="text-lg font-semibold mb-2">ბარათი 1</h3>
+        <p class="text-gray-600">ეს არის პირველი ბარათის აღწერა.</p>
+      </div>
+
+      <div class="bg-white shadow rounded-xl p-4">
+        <h3 class="text-lg font-semibold mb-2">ბარათი 2</h3>
+        <p class="text-gray-600">ეს არის მეორე ბარათის აღწერა.</p>
+      </div>
+
+      <div class="bg-white shadow rounded-xl p-4">
+        <h3 class="text-lg font-semibold mb-2">ბარათი 3</h3>
+        <p class="text-gray-600">ეს არის მესამე ბარათის აღწერა.</p>
+      </div>
+
+      <div class="bg-white shadow rounded-xl p-4">
+        <h3 class="text-lg font-semibold mb-2">ბარათი 4</h3>
+        <p class="text-gray-600">ეს არის მეოთხე ბარათის აღწერა.</p>
+      </div>
+
+      <div class="bg-white shadow rounded-xl p-4">
+        <h3 class="text-lg font-semibold mb-2">ბარათი 5</h3>
+        <p class="text-gray-600">ეს არის მეხუთე ბარათის აღწერა.</p>
+      </div>
+
+      <div class="bg-white shadow rounded-xl p-4">
+        <h3 class="text-lg font-semibold mb-2">ბარათი 6</h3>
+        <p class="text-gray-600">ეს არის მეექვსე ბარათის აღწერა.</p>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

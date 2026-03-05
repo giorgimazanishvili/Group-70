@@ -9,8 +9,8 @@
 
 const cars = ["BMW", "Mercedes", "Audi", "Toyota"];
 
-// ორიელი ელემენტის გამოტანა, მეორე წაგვყავდეს უგულებელყოფით
-const [firstCar, , thirdCar] = cars;
+
+const [firstCar,  thirdCar] = cars;
 
 console.log(firstCar);  // "BMW"
 console.log(thirdCar);  // "Audi"

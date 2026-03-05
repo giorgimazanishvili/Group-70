@@ -1,0 +1,33 @@
+<!-- 4) შექმენი obj.
+შექმენი ახალი obj, newNumbersObj, სადაც spread-ის გამოყენებით დაამატებ რიცხვს 4 ბოლოში.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Spread Example</title>
+</head>
+<body>
+
+<h2>Object Spread Operator</h2>
+<p id="result"></p>
+
+<script>
+    const obj = {
+        0: 1,
+        1: 2,
+        2: 3
+    };
+
+    const newNumbersObj = {
+        ...obj,
+        3: 4
+    };
+
+    document.getElementById("result").textContent =
+        "New Object: " + JSON.stringify(newNumbersObj);
+</script>
+
+</body>
+</html>

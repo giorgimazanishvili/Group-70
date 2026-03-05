@@ -1,0 +1,44 @@
+<!-- 4) გააკეთე სამი პატარა ბლოკი, რომლებიც ჰორიზონტალურად იქნება განლაგებული და ერთმანეთისგან დაშორებული. თითოეულს ჰქონდეს განსხვავებული ფონის ფერი.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<title>სამი ბლოკი</title>
+<style>
+  .container {
+    display: flex;              /* ჰორიზონტალური განლაგება */
+    justify-content: center;    /* ცენტრში გასწორება */
+    gap: 20px;                  /* დაშორება ბლოკებს შორის */
+    margin-top: 50px;
+  }
+
+  .box {
+    width: 100px;
+    height: 100px;
+  }
+
+  .box1 {
+    background-color: #ff6b6b;  /* წითელი */
+  }
+
+  .box2 {
+    background-color: #4ecdc4;  /* მწვანე-ცისფერი */
+  }
+
+  .box3 {
+    background-color: #ffe66d;  /* ყვითელი */
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="box box1"></div>
+  <div class="box box2"></div>
+  <div class="box box3"></div>
+</div>
+
+</body>
+</html> 

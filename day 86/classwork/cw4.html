@@ -1,0 +1,37 @@
+<!-- 4) გააკეთე ბლოკი, რომელიც hover-ზე შეიცვლის ფერს. დამატებით შეცვალე ტექსტის ფერიც hover მდგომარეობაში. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover ეფექტი</title>
+    <style>
+        .block {
+            width: 300px;
+            height: 200px;
+            background-color: #3498db;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 10px;
+            transition: all 0.3s ease; /* დარღვეული ტრანზიციების ეფექტი */
+        }
+
+        .block:hover {
+            background-color: #e74c3c; /* ფონის ფერი hover-ზე */
+            color: #fff200; /* ტექსტის ფერი hover-ზე */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="block">
+        ჰოვერი ამ ბლოკზე!
+    </div>
+
+</body>
+</html>

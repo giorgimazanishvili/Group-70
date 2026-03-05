@@ -1,0 +1,62 @@
+<!-- 6) შექმენი responsive ბლოკი, რომელიც მობილურზე ერთ სვეტად გამოჩნდება, ხოლო დიდ ეკრანზე ორ ან სამ სვეტად. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive ბლოკი</title>
+    <style>
+        /* ვერდიკალური სტილისთვის */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr; /* თავიდან ერთი სვეტი */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .block {
+            background-color: #3498db;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* დიდი ეკრანებისთვის, 2 სვეტიანი განლაგება */
+        @media (min-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr); /* ორი სვეტი */
+            }
+        }
+
+        /* უფრო დიდი ეკრანებისთვის, 3 სვეტიანი განლაგება */
+        @media (min-width: 1024px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr); /* სამი სვეტი */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="block">ბლოკი 1</div>
+        <div class="block">ბლოკი 2</div>
+        <div class="block">ბლოკი 3</div>
+        <div class="block">ბლოკი 4</div>
+        <div class="block">ბლოკი 5</div>
+        <div class="block">ბლოკი 6</div>
+    </div>
+
+</body>
+</html>

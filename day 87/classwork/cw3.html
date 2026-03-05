@@ -1,0 +1,25 @@
+<!-- 3) შექმენი მასივი colors = ["red", "blue"].
+შექმენი ახალი მასივი სადაც "green" იქნება დასაწყისში, შემდეგ spread-ით ძველი ელემენტები. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Element at Beginning</title>
+</head>
+<body>
+
+<h2>Spread Operator Example</h2>
+<p id="result"></p>
+
+<script>
+    const colors = ["red", "blue"];
+
+    const newColors = ["green", ...colors];
+
+    document.getElementById("result").textContent =
+        "New Colors Array: " + newColors.join(", ");
+</script>
+
+</body>
+</html>

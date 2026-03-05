@@ -1,0 +1,66 @@
+<!-- 3) შექმენი ღილაკი რომელსაც ექნება მომრგვალებული კუთხეები (rounded). სცადე სხვადასხვა დონე — მცირედან სრულ წრემდე. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>მომრგვალებული ღილაკები</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .btn1 {
+            background-color: #3498db;
+            border: none;
+            border-radius: 5px; /* მცირედ მომრგვალებული კუთხეები */
+        }
+
+        .btn2 {
+            background-color: #e74c3c;
+            border: none;
+            border-radius: 15px; /* უფრო მომრგვალებული კუთხეები */
+        }
+
+        .btn3 {
+            background-color: #2ecc71;
+            border: none;
+            border-radius: 50px; /* თითქმის წრე */
+        }
+
+        .btn4 {
+            background-color: #f39c12;
+            border: none;
+            border-radius: 50%; /* სრულად მომრგვალებული (Circle) */
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="btn btn1">მცირედ მომრგვალებული</button>
+    <button class="btn btn2">მომრგვალებული</button>
+    <button class="btn btn3">წრის ფორმა</button>
+    <button class="btn btn4">🔵</button>
+
+</body>
+</html>

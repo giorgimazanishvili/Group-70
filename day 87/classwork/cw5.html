@@ -1,0 +1,38 @@
+<!-- 5) გაქვს ორი obj
+
+გააერთიანე ისინი ერთ obj-ად spread-ის გამოყენებით.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Merge Objects with Spread</title>
+</head>
+<body>
+
+<h2>Merge Objects Example</h2>
+<p id="result"></p>
+
+<script>
+    const obj1 = {
+        a: 1,
+        b: 2
+    };
+
+    const obj2 = {
+        c: 3,
+        d: 4
+    };
+
+    const mergedObj = {
+        ...obj1,
+        ...obj2
+    };
+
+    document.getElementById("result").textContent =
+        "Merged Object: " + JSON.stringify(mergedObj);
+</script>
+
+</body>
+</html>

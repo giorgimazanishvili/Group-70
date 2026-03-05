@@ -1,0 +1,26 @@
+<!-- 1) შექმენი მასივი numbers = [1, 2, 3].
+შექმენი ახალი მასივი newNumbers, სადაც spread-ის გამოყენებით დაამატებ რიცხვს 4 ბოლოში.
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spread Example</title>
+</head>
+<body>
+
+<h2>Spread Operator Example</h2>
+<p id="result"></p>
+
+<script>
+    const numbers = [1, 2, 3];
+
+    const newNumbers = [...numbers, 4];
+
+    document.getElementById("result").textContent = 
+        "New Array: " + newNumbers.join(", ");
+</script>
+
+</body>
+</html>

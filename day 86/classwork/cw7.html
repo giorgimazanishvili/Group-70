@@ -1,0 +1,63 @@
+<!-- 7) გააკეთე grid განლაგება 6 ელემენტით. სხვადასხვა ეკრანზე სვეტების რაოდენობა უნდა იცვლებოდეს.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid განლაგება</title>
+    <style>
+        /* სტილები ბლოკებისთვის */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr; /* მობილურებისთვის ერთი სვეტი */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .block {
+            background-color: #3498db;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 768px-ზე დიდი ეკრანებისთვის, ორი სვეტი */
+        @media (min-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr); /* ორი სვეტი */
+            }
+        }
+
+        /* 1024px-ზე დიდი ეკრანებისთვის, სამი სვეტი */
+        @media (min-width: 1024px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr); /* სამი სვეტი */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="block">ელემენტი 1</div>
+        <div class="block">ელემენტი 2</div>
+        <div class="block">ელემენტი 3</div>
+        <div class="block">ელემენტი 4</div>
+        <div class="block">ელემენტი 5</div>
+        <div class="block">ელემენტი 6</div>
+    </div>
+
+</body>
+</html>

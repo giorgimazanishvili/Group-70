@@ -1,0 +1,43 @@
+<!-- 9) გააკეთე flex განლაგება, სადაც ელემენტები ცენტრში იქნება განთავსებული როგორც ჰორიზონტალურად, ასევე ვერტიკალურად.
+-->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex ცენტრში განლაგება</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* მთლიანად ეკრანის სიგრძე */
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;  /* Flexbox კონტეინერი */
+            justify-content: center; /* ჰორიზონტალური ცენტრი */
+            align-items: center;     /* ვერტიკალური ცენტრი */
+            height: 100%;  /* კონტეინერი უნდა ფარავდეს ეკრანის სრულ სიმაღლეს */
+        }
+
+        .item {
+            background-color: #3498db;
+            color: white;
+            padding: 30px;
+            font-size: 24px;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item">მოძრაობაში ცენტრალიზებული ელემენტი</div>
+    </div>
+
+</body>
+</html>

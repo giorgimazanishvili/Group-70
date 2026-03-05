@@ -1,0 +1,33 @@
+<!-- 5) დაამატე transition ეფექტი ღილაკზე ისე, რომ hover-ის დროს ფერის ცვლილება იყოს плавный (არ იყოს მკვეთრი). სცადე სხვადასხვა სიჩქარე.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ღილაკი transition ეფექტით</title>
+    <style>
+        .btn {
+            padding: 15px 30px;
+            background-color: #3498db;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.5s ease, transform 0.3s ease; /* ნაზი ტრანზიცია */
+        }
+
+        .btn:hover {
+            background-color: #e74c3c; /* ფერის ცვლილება hover-ზე */
+            transform: scale(1.1); /* ღილაკის ზომის ზღვრული ზრდა */
+        }
+    </style>
+</head>
+<body>
+
+    <button class="btn">ღილაკი hover ეფექტით</button>
+
+</body>
+</html>

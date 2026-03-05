@@ -1,0 +1,33 @@
+<!-- 5) შექმენი კონტეინერი, რომლის შიგნით ელემენტები იქნება ვერტიკალურად დალაგებული და ცენტრში გასწორებული. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<style>
+.container {
+  display: flex;
+  flex-direction: column;   /* ვერტიკალური განლაგება */
+  justify-content: center;  /* ვერტიკალურად ცენტრში */
+  align-items: center;      /* ჰორიზონტალურად ცენტრში */
+  height: 300px;            /* სიმაღლე რომ ცენტრში გამოჩნდეს */
+  border: 2px solid black;
+}
+
+.item {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: lightblue;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="item">ელემენტი 1</div>
+  <div class="item">ელემენტი 2</div>
+  <div class="item">ელემენტი 3</div>
+</div>
+
+</body>
+</html>

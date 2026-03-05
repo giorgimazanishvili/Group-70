@@ -1,0 +1,34 @@
+<!-- 8) გააკეთე ორი ელემენტი ისე, რომ ერთი იყოს მარცხენა მხარეს, მეორე — მარჯვენა მხარეს (ერთ ხაზზე).
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<style>
+.container {
+  display: flex;
+  justify-content: space-between; /* ერთს მარცხნივ, მეორეს მარჯვნივ */
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.left {
+  background-color: lightblue;
+  padding: 10px;
+}
+
+.right {
+  background-color: lightgreen;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="left">მარცხენა ელემენტი</div>
+  <div class="right">მარჯვენა ელემენტი</div>
+</div>
+
+</body>
+</html>

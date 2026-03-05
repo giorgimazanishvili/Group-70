@@ -1,0 +1,29 @@
+<!-- 10) გააკეთე კონტეინერი ფიქსირებული სიმაღლით, სადაც შიგნით არსებული ელემენტი იქნება ზუსტად შუაში (ვერტიკალურად და ჰორიზონტალურად). -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<style>
+.container {
+  height: 300px;              /* ფიქსირებული სიმაღლე */
+  border: 2px solid black;
+
+  display: flex;
+  justify-content: center;    /* ჰორიზონტალურად ცენტრში */
+  align-items: center;        /* ვერტიკალურად ცენტრში */
+}
+
+.item {
+  background-color: lightblue;
+  padding: 15px 25px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="item">შუაში განთავსებული ელემენტი</div>
+</div>
+
+</body>
+</html>
