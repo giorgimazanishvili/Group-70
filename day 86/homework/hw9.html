@@ -1,0 +1,68 @@
+<!-- 9) შექმენი ბარათების grid, სადაც თითოეულ ბარათს აქვს rounded ზედა კუთხეები, shadow და hover-ზე ჩრდილის გაზრდა transition-ით.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<title>Cards Grid</title>
+
+<style>
+
+body{
+  font-family:Arial, sans-serif;
+  background:#f3f4f6;
+  padding:40px;
+}
+
+/* Grid კონტეინერი */
+.cards-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:20px;
+}
+
+/* ბარათი */
+.card{
+  background:white;
+  border-radius:20px 20px 0 0; /* rounded ზედა კუთხეები */
+  padding:20px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:box-shadow 0.3s ease;
+}
+
+/* Hover ეფექტი */
+.card:hover{
+  box-shadow:0 15px 35px rgba(0,0,0,0.25);
+}
+
+.card h3{
+  margin-top:0;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="cards-grid">
+
+  <div class="card">
+    <h3>Card 1</h3>
+    <p>ბარათის ტექსტი</p>
+  </div>
+
+  <div class="card">
+    <h3>Card 2</h3>
+    <p>ბარათის ტექსტი</p>
+  </div>
+
+  <div class="card">
+    <h3>Card 3</h3>
+    <p>ბარათის ტექსტი</p>
+  </div>
+
+</div>
+
+</body>
+</html>

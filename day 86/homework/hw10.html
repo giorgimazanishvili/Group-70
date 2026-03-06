@@ -1,0 +1,69 @@
+<!-- 10) გააკეთე responsive flex layout, სადაც დესკტოპზე ტექსტი და სურათი გვერდიგვერდაა, ხოლო მობილურზე სურათი ტექსტის ზემოთ გადადის.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<title>Responsive Flex Layout</title>
+
+<style>
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f3f4f6;
+  padding:40px;
+}
+
+.container{
+  display:flex;
+  align-items:center;
+  gap:30px;
+  max-width:900px;
+  margin:auto;
+}
+
+.text{
+  flex:1;
+}
+
+.image{
+  flex:1;
+}
+
+.image img{
+  width:100%;
+  border-radius:12px;
+}
+
+/* Mobile */
+@media (max-width:768px){
+  .container{
+    flex-direction:column;
+  }
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+  <div class="text">
+    <h2>სათაური</h2>
+    <p>
+      ეს არის მაგალითი responsive layout-ის, სადაც დესკტოპზე ტექსტი და სურათი
+      გვერდიგვერდ არის განლაგებული, ხოლო მობილურზე სურათი ტექსტის ზემოთ გადადის.
+    </p>
+  </div>
+
+  <div class="image">
+    <img src="https://picsum.photos/600/400" alt="image">
+  </div>
+
+</div>
+
+</body>
+</html>

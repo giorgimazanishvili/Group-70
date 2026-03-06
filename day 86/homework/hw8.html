@@ -1,0 +1,44 @@
+<!-- 8) გააკეთე gradient ფონის მქონე სექცია, სადაც ტექსტი ცენტრშია (flex-ის გამოყენებით) და აქვს მსუბუქი shadow ტექსტზე. -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<title>Gradient Section</title>
+
+<style>
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+}
+
+/* სექცია */
+.gradient-section{
+  height:100vh;
+  display:flex;
+  justify-content:center; /* ჰორიზონტალური ცენტრი */
+  align-items:center; /* ვერტიკალური ცენტრი */
+
+  background:linear-gradient(135deg,#6a11cb,#2575fc);
+  color:white;
+  text-align:center;
+}
+
+/* ტექსტი */
+.gradient-section h1{
+  font-size:48px;
+  text-shadow:0 4px 10px rgba(0,0,0,0.3); /* მსუბუქი shadow */
+}
+
+</style>
+
+</head>
+<body>
+
+<section class="gradient-section">
+  <h1>მოგესალმებით ჩემს საიტზე</h1>
+</section>
+
+</body>
+</html>
