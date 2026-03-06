@@ -1,0 +1,66 @@
+<!-- 6) გააკეთე responsive grid გალერეა 8 სურათით:
+მობილურზე — 2 სვეტი
+ტაბლეტზე — 3 სვეტი
+დიდ ეკრანზე — 4 სვეტი
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<title>Responsive Gallery</title>
+
+<style>
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f3f4f6;
+  padding:20px;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr); /* mobile - 2 columns */
+  gap:15px;
+}
+
+.gallery img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* Tablet */
+@media (min-width:768px){
+  .gallery{
+    grid-template-columns:repeat(3, 1fr);
+  }
+}
+
+/* Large screens */
+@media (min-width:1024px){
+  .gallery{
+    grid-template-columns:repeat(4, 1fr);
+  }
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="gallery">
+  <img src="https://picsum.photos/400?1">
+  <img src="https://picsum.photos/400?2">
+  <img src="https://picsum.photos/400?3">
+  <img src="https://picsum.photos/400?4">
+  <img src="https://picsum.photos/400?5">
+  <img src="https://picsum.photos/400?6">
+  <img src="https://picsum.photos/400?7">
+  <img src="https://picsum.photos/400?8">
+</div>
+
+</body>
+</html>

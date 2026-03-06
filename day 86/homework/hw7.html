@@ -1,0 +1,61 @@
+<!-- 7) შექმენი ღილაკების ჯგუფი flex-ის გამოყენებით, სადაც ღილაკები თანაბრად ნაწილდება სივრცეში და პატარა ეკრანზე ვერტიკალურად ეწყობა.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<title>Flex Button Group</title>
+
+<style>
+
+body{
+  font-family:Arial, sans-serif;
+  background:#f3f4f6;
+  padding:40px;
+}
+
+/* ღილაკების კონტეინერი */
+.button-group{
+  display:flex;
+  justify-content:space-between; /* თანაბარი განაწილება */
+  gap:15px;
+}
+
+/* ღილაკები */
+.button-group button{
+  flex:1;
+  padding:14px;
+  border:none;
+  border-radius:10px;
+  background:#2563eb;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.button-group button:hover{
+  background:#1d4ed8;
+}
+
+/* პატარა ეკრანი */
+@media (max-width:600px){
+  .button-group{
+    flex-direction:column; /* ვერტიკალურად განლაგება */
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="button-group">
+  <button>მთავარი</button>
+  <button>სერვისები</button>
+  <button>პროდუქტები</button>
+  <button>კონტაქტი</button>
+</div>
+
+</body>
+</html>

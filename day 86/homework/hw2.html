@@ -1,0 +1,48 @@
+<!-- 2) გააკეთე gradient ღილაკი, რომელიც hover-ზე ოდნავ იზრდება ზომაში და ფერები მსუბუქად იცვლება. დაამატე transition ეფექტი.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<title>Gradient Button</title>
+
+<style>
+
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background:#f3f4f6;
+  font-family:Arial, sans-serif;
+}
+
+.gradient-btn{
+  padding:14px 28px;
+  font-size:16px;
+  border:none;
+  border-radius:30px;
+  color:white;
+  cursor:pointer;
+
+  background:linear-gradient(135deg,#6a11cb,#2575fc);
+
+  transition: all 0.3s ease;
+}
+
+.gradient-btn:hover{
+  transform:scale(1.08);
+
+  background:linear-gradient(135deg,#7f2aff,#3a8bfd);
+}
+
+</style>
+
+</head>
+<body>
+
+<button class="gradient-btn">დაჭირე</button>
+
+</body>
+</html>

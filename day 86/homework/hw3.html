@@ -1,0 +1,64 @@
+<!-- 3) შექმენი 3 ბარათის grid განლაგება, სადაც შუა ბარათს ექნება უფრო დიდი shadow ვიდრე დანარჩენებს.
+ -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<title>3 Card Grid</title>
+
+<style>
+
+body{
+  font-family: Arial, sans-serif;
+  background:#f3f4f6;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3, 200px);
+  gap:20px;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card.center{
+  box-shadow:0 15px 35px rgba(0,0,0,0.25); /* უფრო დიდი shadow */
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="grid">
+
+  <div class="card">
+    <h3>Card 1</h3>
+    <p>ტექსტი</p>
+  </div>
+
+  <div class="card center">
+    <h3>Card 2</h3>
+    <p>შუა ბარათი</p>
+  </div>
+
+  <div class="card">
+    <h3>Card 3</h3>
+    <p>ტექსტი</p>
+  </div>
+
+</div>
+
+</body>
+</html>

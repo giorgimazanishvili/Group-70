@@ -1,0 +1,71 @@
+<!-- 4) გააკეთე flex ნავიგაცია (navbar), სადაც ლინკები ჰორიზონტალურად არის განლაგებული და hover-ზე ქვედა ხაზით ან ფერის ცვლილებით რეაგირებს.
+ -->
+
+ <!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<title>Flex Navbar</title>
+
+<style>
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+}
+
+.navbar{
+  background:#1f2937;
+  padding:15px 30px;
+}
+
+.nav-links{
+  display:flex; /* Flexbox */
+  gap:30px;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  font-size:16px;
+  position:relative;
+  transition:color 0.3s ease;
+}
+
+/* Hover ეფექტი */
+.nav-links a:hover{
+  color:#60a5fa;
+}
+
+/* ქვედა ხაზის ანიმაცია */
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  width:0%;
+  height:2px;
+  background:#60a5fa;
+  transition:width 0.3s ease;
+}
+
+.nav-links a:hover::after{
+  width:100%;
+}
+
+</style>
+
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-links">
+    <a href="#">მთავარი</a>
+    <a href="#">ჩვენ შესახებ</a>
+    <a href="#">სერვისები</a>
+    <a href="#">კონტაქტი</a>
+  </div>
+</nav>
+
+</body>
+</html>
