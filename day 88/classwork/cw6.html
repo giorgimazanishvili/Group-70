@@ -1,0 +1,30 @@
+<!-- 6) შექმენი ღილაკი icon-ით. hover-ზე icon დატრიალდეს 180 გრადუსით (hover:rotate-180). გამოიყენე transition-transform duration-500. დამატებით active-ზე დაამატე scale-90, ხოლო hover-ზე ღილაკის ფერი შეიცვალოს.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Icon Button</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex justify-center items-center h-screen bg-gray-100">
+
+  <button class="flex items-center gap-2 bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 active:scale-90 transition">
+
+    <span>Click</span>
+
+    <!-- Icon -->
+    <svg class="w-5 h-5 transition-transform duration-500 hover:rotate-180"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2"
+         viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+    </svg>
+
+  </button>
+
+</body>
+</html>

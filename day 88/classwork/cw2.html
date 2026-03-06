@@ -1,0 +1,17 @@
+<!-- 2) შექმენი ელემენტი (მაგალითად წრე ან ღილაკი), რომელსაც ექნება animate-bounce. დაუმატე hover-ზე ფერის შეცვლა (hover:bg-blue-500). დამატებითი პირობა: mobile-ზე bounce მუშაობდეს, მაგრამ desktop-ზე არა (გამოიყენე responsive utility-ები). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tailwind Animation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex justify-center items-center h-screen bg-gray-100">
+
+  <button class="bg-red-500 text-white px-6 py-3 rounded-full animate-bounce md:animate-none hover:bg-blue-500 transition">
+    Click Me
+  </button>
+
+</body>
+</html>

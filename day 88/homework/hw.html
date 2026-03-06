@@ -1,0 +1,75 @@
+<!-- 1) შექმენი 8 ბარათის სექცია grid-ით.
+
+Mobile-ზე 1 სვეტი
+
+md-ზე 2 სვეტი
+
+lg-ზე 3 სვეტი
+
+xl-ზე 4 სვეტი
+
+2xl-ზე 5 სვეტი
+ბარათებს დაუმატე shadow-lg, rounded-2xl, p-6, transition.
+Hover-ზე ბარათი ოდნავ გაიზარდოს (hover:scale-105) და ჩრდილი გაძლიერდეს.
+დამატებითი პირობა: პირველი ბარათი ყოველთვის 2 სვეტს იკავებდეს (col-span-2) lg ზომიდან ზემოთ.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Grid Cards</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+
+  <h1 class="text-3xl font-bold mb-6 text-center">Responsive Cards Grid</h1>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6">
+
+    <!-- პირველი ბარათი, lg+ col-span-2 -->
+    <div class="bg-white shadow-lg rounded-2xl p-6 transition transform hover:scale-105 hover:shadow-2xl lg:col-span-2">
+      <h2 class="text-xl font-bold mb-2">Card 1</h2>
+      <p class="text-gray-600">This card spans 2 columns on large screens and above.</p>
+    </div>
+
+    <!-- დანარჩენი ბარათები -->
+    <div class="bg-white shadow-lg rounded-2xl p-6 transition transform hover:scale-105 hover:shadow-2xl">
+      <h2 class="text-xl font-bold mb-2">Card 2</h2>
+      <p class="text-gray-600">Content for card 2.</p>
+    </div>
+
+    <div class="bg-white shadow-lg rounded-2xl p-6 transition transform hover:scale-105 hover:shadow-2xl">
+      <h2 class="text-xl font-bold mb-2">Card 3</h2>
+      <p class="text-gray-600">Content for card 3.</p>
+    </div>
+
+    <div class="bg-white shadow-lg rounded-2xl p-6 transition transform hover:scale-105 hover:shadow-2xl">
+      <h2 class="text-xl font-bold mb-2">Card 4</h2>
+      <p class="text-gray-600">Content for card 4.</p>
+    </div>
+
+    <div class="bg-white shadow-lg rounded-2xl p-6 transition transform hover:scale-105 hover:shadow-2xl">
+      <h2 class="text-xl font-bold mb-2">Card 5</h2>
+      <p class="text-gray-600">Content for card 5.</p>
+    </div>
+
+    <div class="bg-white shadow-lg rounded-2xl p-6 transition transform hover:scale-105 hover:shadow-2xl">
+      <h2 class="text-xl font-bold mb-2">Card 6</h2>
+      <p class="text-gray-600">Content for card 6.</p>
+    </div>
+
+    <div class="bg-white shadow-lg rounded-2xl p-6 transition transform hover:scale-105 hover:shadow-2xl">
+      <h2 class="text-xl font-bold mb-2">Card 7</h2>
+      <p class="text-gray-600">Content for card 7.</p>
+    </div>
+
+    <div class="bg-white shadow-lg rounded-2xl p-6 transition transform hover:scale-105 hover:shadow-2xl">
+      <h2 class="text-xl font-bold mb-2">Card 8</h2>
+      <p class="text-gray-600">Content for card 8.</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

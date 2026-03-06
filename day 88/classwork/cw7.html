@@ -1,0 +1,88 @@
+<!-- 7)აწყეთ გაკვეთილზე, როგორც გაჩვენეთ მაგდაგვარი sidebar დატვირთეთ მეტი ფუნქცით  და ასევე დაამატეთ მეტი content-ი  main-ში. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced Sidebar Layout</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex bg-gray-100">
+
+<!-- Sidebar -->
+<div class="w-64 min-h-screen bg-gray-900 text-white p-5">
+
+<h2 class="text-2xl font-bold mb-6">Dashboard</h2>
+
+<ul class="space-y-3">
+
+<li class="p-2 rounded hover:bg-gray-700 cursor-pointer">🏠 Home</li>
+
+<li class="p-2 rounded hover:bg-gray-700 cursor-pointer">👤 Profile</li>
+
+<li class="p-2 rounded hover:bg-gray-700 cursor-pointer">📊 Analytics</li>
+
+<li class="p-2 rounded hover:bg-gray-700 cursor-pointer">📁 Projects</li>
+
+<li class="p-2 rounded hover:bg-gray-700 cursor-pointer">⚙️ Settings</li>
+
+<li class="p-2 rounded hover:bg-gray-700 cursor-pointer">🚪 Logout</li>
+
+</ul>
+
+</div>
+
+<!-- Main Content -->
+<div class="flex-1 p-8">
+
+<h1 class="text-3xl font-bold mb-6">Dashboard Overview</h1>
+
+<p class="mb-6 text-gray-700">
+ეს არის მთავარი კონტენტი. აქ შეგიძლია დაამატო სხვადასხვა ინფორმაცია,
+სტატისტიკა, ბარათები და სხვა ელემენტები.
+</p>
+
+<!-- Cards -->
+<div class="grid grid-cols-3 gap-6">
+
+<div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+<h3 class="text-lg font-bold mb-2">Users</h3>
+<p class="text-gray-600">1,240 Active Users</p>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+<h3 class="text-lg font-bold mb-2">Sales</h3>
+<p class="text-gray-600">$8,530 Revenue</p>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+<h3 class="text-lg font-bold mb-2">Projects</h3>
+<p class="text-gray-600">24 Running Projects</p>
+</div>
+
+</div>
+
+<!-- Extra Content -->
+<div class="mt-10 bg-white p-6 rounded-xl shadow">
+
+<h2 class="text-xl font-bold mb-4">Recent Activity</h2>
+
+<ul class="space-y-2 text-gray-700">
+
+<li>✔ New user registered</li>
+
+<li>✔ Project updated</li>
+
+<li>✔ New order received</li>
+
+<li>✔ Server backup completed</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</body>
+</html>

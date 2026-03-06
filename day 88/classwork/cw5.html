@@ -1,0 +1,28 @@
+<!-- 5) შექმენი card, რომელსაც hover-ზე ექნება transform, rotate-3, scale-105 და transition duration-300. hover-ზე ჩრდილიც გაიზარდოს (hover:shadow-2xl). დაამატე რომ ტექსტიც ოდნავ ზემოთ აიწიოს (hover:-translate-y-2).
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hover Card</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex justify-center items-center h-screen bg-gray-100">
+
+  <div class="bg-white p-6 rounded-xl shadow-lg transform transition duration-300 hover:rotate-3 hover:scale-105 hover:shadow-2xl">
+    
+    <h2 class="text-xl font-bold mb-2 transform transition duration-300 hover:-translate-y-2">
+      Card Title
+    </h2>
+
+    <p class="text-gray-600 transform transition duration-300 hover:-translate-y-2">
+      ეს არის მაგალითი card-ის, რომელსაც hover-ზე აქვს rotation,
+      scale, shadow და ტექსტის მოძრაობა ზემოთ.
+    </p>
+
+  </div>
+
+</body>
+</html>

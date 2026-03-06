@@ -1,0 +1,36 @@
+<!-- 4) შექმენი გვერდის layout sidebar-ით. გამოიყენე flex. Sidebar-ს მიეცი w-64, min-h-screen, განსხვავებული ფონი და მენიუს ელემენტებს დაუმატე hover:bg-gray-200 და cursor-pointer. მთავარი კონტენტი იყოს flex-1 p-6.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sidebar Layout</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex">
+
+  <!-- Sidebar -->
+  <div class="w-64 min-h-screen bg-gray-100 p-4">
+    <h2 class="text-xl font-bold mb-4">Menu</h2>
+
+    <ul class="space-y-2">
+      <li class="p-2 hover:bg-gray-200 cursor-pointer rounded">Dashboard</li>
+      <li class="p-2 hover:bg-gray-200 cursor-pointer rounded">Profile</li>
+      <li class="p-2 hover:bg-gray-200 cursor-pointer rounded">Settings</li>
+      <li class="p-2 hover:bg-gray-200 cursor-pointer rounded">Logout</li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex-1 p-6">
+    <h1 class="text-2xl font-bold mb-4">Main Content</h1>
+    <p>
+      ეს არის მთავარი კონტენტის ნაწილი. აქ შეგიძლია დაამატო ტექსტი,
+      ბარათები, სურათები ან სხვა ელემენტები.
+    </p>
+  </div>
+
+</body>
+</html>
