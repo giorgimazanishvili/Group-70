@@ -1,0 +1,61 @@
+<!-- 4) შექმენი responsive sidebar layout:
+
+Desktop-ზე sidebar ფიქსირებული იყოს მარცხნივ (fixed)
+
+Content-ს ჰქონდეს ml-64
+
+Mobile-ზე sidebar იყოს -translate-x-full და ღილაკზე დაჭერისას გამოჩნდეს
+
+Sidebar-ს ჰქონდეს smooth transition (transition-all duration-300)
+დამატებითი პირობა: აქტიურ მენიუს ელემენტს ჰქონდეს განსხვავებული ფონი და მარცხენა border (border-l-4).
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Sidebar Layout</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Sidebar toggle button (mobile) -->
+  <div class="p-4 lg:hidden">
+    <button id="menu-btn" class="bg-blue-500 text-white px-4 py-2 rounded-lg">
+      ☰ Menu
+    </button>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-gray-900 text-white p-5 transform -translate-x-full lg:translate-x-0 transition-all duration-300 z-50">
+
+    <h2 class="text-2xl font-bold mb-6">Dashboard</h2>
+
+    <ul class="space-y-2">
+      <li class="p-2 rounded hover:bg-gray-700 cursor-pointer border-l-4 border-transparent">Home</li>
+      <li class="p-2 rounded hover:bg-gray-700 cursor-pointer border-l-4 border-transparent active:bg-gray-800 border-l-4 border-blue-500">Profile</li>
+      <li class="p-2 rounded hover:bg-gray-700 cursor-pointer border-l-4 border-transparent">Projects</li>
+      <li class="p-2 rounded hover:bg-gray-700 cursor-pointer border-l-4 border-transparent">Settings</li>
+      <li class="p-2 rounded hover:bg-gray-700 cursor-pointer border-l-4 border-transparent">Logout</li>
+    </ul>
+
+  </div>
+
+  <!-- Main Content -->
+  <div class="lg:ml-64 p-6 transition-all duration-300">
+    <h1 class="text-3xl font-bold mb-4">Main Content</h1>
+    <p class="text-gray-700 mb-2">ეს არის მთავარი კონტენტი. აქ შეგიძლია დაამატო სხვადასხვა ელემენტი, ბარათები, გრაფიკები და სხვა.</p>
+    <p class="text-gray-700">Responsive sidebar-ი მუშაობს mobile-ზე და desktop-ზე როგორც აღინიშნა.</p>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const sidebar = document.getElementById('sidebar');
+
+    menuBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('-translate-x-full');
+    });
+  </script>
+
+</body>
+</html>

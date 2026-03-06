@@ -1,0 +1,40 @@
+<!-- 5) შექმენი advanced card hover ეფექტით:
+
+transform
+
+rotate-2
+
+scale-105
+
+hover:-translate-y-3
+
+transition duration-500 ease-in-out
+Hover-ზე card-ის შიგნით არსებული ღილაკი გამოჩნდეს (opacity-0 → opacity-100).
+დამატებითი პირობა: გამოიყენე group და group-hover. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Card Hover</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex justify-center items-center h-screen bg-gray-100">
+
+  <!-- Card -->
+  <div class="group bg-white shadow-lg rounded-2xl p-6 w-80 transform transition duration-500 ease-in-out hover:rotate-2 hover:scale-105 hover:-translate-y-3">
+
+    <h2 class="text-xl font-bold mb-2">Card Title</h2>
+    <p class="text-gray-600 mb-4">
+      This is an advanced card with a hover effect. When hovered, the button appears.
+    </p>
+
+    <!-- Hidden button that appears on hover -->
+    <button class="opacity-0 group-hover:opacity-100 bg-blue-500 text-white px-4 py-2 rounded-lg transition-opacity duration-500">
+      Click Me
+    </button>
+
+  </div>
+
+</body>
+</html>

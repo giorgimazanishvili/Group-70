@@ -1,0 +1,31 @@
+<!-- 
+2) შექმენი მრგვალი ღილაკი, რომელსაც აქვს animate-bounce, მაგრამ:
+
+მხოლოდ mobile და md ზომაზე მუშაობდეს
+
+lg-დან ზემოთ animation შეწყდეს
+Hover-ზე შეიცვალოს ფონი და ტექსტის ფერი.
+დამატებითი პირობა: focus-ზე დაემატოს ring ეფექტი (focus:ring-4) და animation შეწყდეს focus დროს.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Bouncing Button</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex justify-center items-center h-screen bg-gray-100">
+
+  <button 
+    class="w-16 h-16 bg-blue-500 text-white rounded-full 
+           animate-bounce md:animate-bounce lg:animate-none 
+           hover:bg-blue-600 hover:text-yellow-200 
+           focus:ring-4 focus:ring-blue-300 focus:animate-none 
+           transition"
+  >
+    Go
+  </button>
+
+</body>
+</html>
